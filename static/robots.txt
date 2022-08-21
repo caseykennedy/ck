@@ -1,0 +1,3 @@
+User-agent: *
+
+sitemap: https://caseykennedy.me/sitemap.xml

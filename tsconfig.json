@@ -1,0 +1,39 @@
+{
+  "exclude": ["node_modules", "**/node_modules", "**/.cache/*", "**/public"],
+  "include": [
+    "./src/",
+    ".eslintrc.js",
+    "**/gatsby/**/*",
+    "**/src/**/*",
+    "**/index.ts"
+  ],
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"] // resolve all modules prefixed with `@/` from `src` directory
+    },
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "esnext",
+    "jsx": "react",
+    "lib": ["dom", "es2015", "es2017", "es2019"],
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "resolveJsonModule": true,
+    "checkJs": true,
+    "declaration": true,
+    "noImplicitAny": true,
+    "alwaysStrict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
