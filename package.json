@@ -1,7 +1,7 @@
 {
-  "name": "ck-app-marketing",
+  "name": "ck-portfolio",
   "private": true,
-  "description": "Tetra studio site + portfolio",
+  "description": "Casey Kennedy website + portfolio",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
