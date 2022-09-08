@@ -14,9 +14,9 @@ export const Wrapper = styled.div`
   height: 100%;
   width: 100%;
 
-  @media ${breakpoint.tablet} {
+  /* @media ${breakpoint.tablet} {
     flex-flow: row nowrap;
-  }
+  } */
 `
 
 export const Content = styled.div`

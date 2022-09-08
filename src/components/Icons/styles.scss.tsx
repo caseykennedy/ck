@@ -14,6 +14,7 @@ export const Icon = styled.span`
 
   svg {
     fill: ${(p) => (p.color ? p.color : 'var(--color-text)')};
+    width: var(--icon-size);
   }
 `
 

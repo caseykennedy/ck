@@ -52,7 +52,26 @@ module.exports = {
         // ...
       },
     },
-    'gatsby-transformer-yaml',
+    {
+      resolve: 'gatsby-transformer-yaml',
+      options: {
+        typeName: ({ node }) => {
+          const name = node.sourceInstanceName
+          if (name === `projects`) {
+            return `Project`
+          }
+          return name
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: './content/projects',
+        name: 'projects',
+      },
+      __key: 'projects',
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {

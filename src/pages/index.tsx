@@ -2,17 +2,15 @@
 // ___________________________________________________________________
 
 import React from 'react'
-
-// Components
 import SEO from '../components/SEO'
-import HomeView from '../views/HomeView'
+import Home from '../views/Home'
 
 // ___________________________________________________________________
 
 const Index = () => (
   <>
     <SEO />
-    <HomeView />
+    <Home />
   </>
 )
 

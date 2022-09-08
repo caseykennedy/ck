@@ -5,6 +5,12 @@ import { css } from 'styled-components'
 import { breakpoint, textCrop } from './mixins'
 
 // NBInternationalPro Regular
+import AcidGroteskRegularEot from './fonts/AcidGrotesk-Regular.eot'
+import AcidGroteskRegularWoff2 from './fonts/AcidGrotesk-Regular.woff2'
+import AcidGroteskRegularWoff from './fonts/AcidGrotesk-Regular.woff'
+import AcidGroteskRegularOtf from './fonts/AcidGrotesk-Regular.otf'
+
+// NBInternationalPro Mono
 import NBInternationalProMonoEot from './fonts/NBInternationalPro-Mono.eot'
 import NBInternationalProMonoWoff2 from './fonts/NBInternationalPro-Mono.woff2'
 import NBInternationalProMonoWoff from './fonts/NBInternationalPro-Mono.woff'
@@ -40,22 +46,23 @@ const Typography = css`
   :root {
     // font family
     --font-primary: 'NBInternationalPro', Helvetica, Arial, sans;
+    --font-secondary: 'AcidGrotesk', Helvetica, Arial, sans;
     --font-mono: 'NBInternationalProMono', Menlo, Liberation Mono, Courier,
       monospace;
     --font-sans: 'NBInternationalPro', Helvetica, Arial, sans;
 
     // font size
     --text-root-size: 1rem;
-    --text-base-size: 1.125rem; // body font-size
-    --text-scale-ratio: 1.333; // multiplier used to generate the type scale values 👇
+    --text-base-size: 0.95rem; // body font-size
+    --text-scale-ratio: 1.25; // multiplier used to generate the type scale values 👇
 
     // font weight
     --body-font-weight: 400;
-    --heading-font-weight: 500;
+    --heading-font-weight: 600;
 
     // line-height
-    --body-line-height: 1.25;
-    --heading-line-height: 1.25;
+    --body-line-height: 1.15;
+    --heading-line-height: 1.15;
 
     // letter-spacing
     --heading-letter-spacing: 0em;
@@ -87,6 +94,19 @@ const Typography = css`
     --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
     --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
     --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
+  }
+
+  /* Acid Grotesk Regular */
+  @font-face {
+    font-family: 'AcidGrotesk';
+    src: url(${AcidGroteskRegularEot});
+    src: url(${AcidGroteskRegularWoff2}) format('woff2'),
+      url(${AcidGroteskRegularWoff}) format('woff'),
+      url(${AcidGroteskRegularOtf}) format('opentype'),
+      url(${AcidGroteskRegularEot}?#iefix) format('embedded-opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
   }
 
   /* NBInternationalPro Mono */
@@ -161,7 +181,7 @@ const Typography = css`
 
   body,
   html {
-    color: var(--color-text);
+    color: var(--color-text-muted);
     font-family: var(--font-primary);
     font-size: var(--text-base-size);
     font-weight: var(--body-font-weight);
@@ -184,34 +204,36 @@ const Typography = css`
   h5 {
     ${textCrop(1, 0.05, -0.05)}
 
+    color: var(--color-heading);
     font-family: var(--font-sans);
     font-weight: var(--heading-font-weight);
     line-height: var(--heading-line-height);
-    margin-bottom: var(--space-lg);
   }
 
-  h1 {
-    font-size: var(--text-xl);
-
-    @media ${breakpoint.desktop} {
-      font-size: var(--text-xxxxl);
-    }
-  }
-
-  h2 {
+  h1,
+  .text-h1 {
     font-size: var(--text-lg);
   }
 
-  h3 {
+  h2,
+  .text-h2 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-md);
+  }
+
+  h3,
+  .text-h3 {
     font-size: var(--text-md);
+    margin-bottom: var(--space-xxs);
   }
 
-  h4 {
-    font-size: var(--text-sm);
-    font-weight: 600;
+  h4,
+  .text-h4 {
+    font-size: var(--text-base-size);
   }
 
-  h5 {
+  h5,
+  .text-h5 {
     font-family: var(--font-mono);
     font-size: var(--text-sm);
     font-weight: var(--heading-font-weight);
@@ -232,21 +254,22 @@ const Typography = css`
     line-height: var(--body-line-height);
 
     &:not(:last-child) {
-      margin-bottom: var(--space-md);
+      margin-bottom: var(--gutter);
     }
 
     &.lead {
-      font-size: var(--text-md);
+      color: var(--color-text);
+      font-size: var(--text-lg);
     }
   }
 
   a {
-    color: var(--color-primary);
+    color: var(--color-text-muted);
     text-decoration: none;
     transition: var(--transition-all);
 
     &:hover {
-      color: var(--color-primary-light);
+      color: var(--color-text);
     }
 
     &.link {
@@ -310,28 +333,6 @@ const Typography = css`
   }
 
   ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: var(--gutter);
-    gap: var(--space-sm);
-
-    font-size: var(--text-root-size);
-    margin-top: var(--space-md);
-
-    li {
-      display: flex;
-      align-items: center;
-
-      span {
-        margin-right: var(--space-xxs);
-        position: relative;
-        bottom: -2px;
-
-        svg {
-          width: 10px;
-        }
-      }
-    }
   }
 `
 

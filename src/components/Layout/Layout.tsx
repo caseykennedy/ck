@@ -4,6 +4,7 @@
 import React, { useRef } from 'react'
 
 // Components
+import Cursor from '../Cursor'
 import Header from '../Header'
 import Footer from '../Footer'
 import SmoothScroll from '../SmoothScroll'
@@ -28,6 +29,7 @@ const Layout = ({ children }: LayoutProps) => {
   )
   return (
     <S.Wrapper>
+      {/* <Cursor /> */}
       <Header />
       <S.Content>
         {/* <SmoothScroll>{children}</SmoothScroll> */}

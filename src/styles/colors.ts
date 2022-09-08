@@ -11,25 +11,30 @@ const Colors = css`
     // base
     --color-black: hsl(0, 0%, 0%);
     --color-white: hsl(0, 0%, 100%);
-    --color-gray: gray;
-
-    --color-primary: #BCB2D7;
-    --color-secondary: #CCC5B3;
-    --color-tertiary: #BBE7E3;
-    --color-quaternary: #FAC6B2;
-    --color-quintary: #8C7746;
 
     // background
-    --color-bg: #151216;
+    --color-bg: hsl(0, 0%, 0%);
     // typography
-    --color-text: #d4d2d6;
-    --color-text-muted: #9692A0;
+    --color-text: hsl(270, 5%, 80%);
+    --color-text-muted: hsl(270, 5%, 60%);
+    --color-heading: hsl(270, 5%, 94%);
     // border
-    --color-border: #322E3C;
+    --color-border: hsl(0, 0%, 20%);
   }
 
-  /* [data-theme='darkMode'] {
-  } */
+  [data-theme='darkMode'] {
+    --color-black: hsl(0, 0%, 100%);
+    --color-white: hsl(0, 0%, 0%);
+
+    // background
+    --color-bg: hsl(270, 5%, 90%);
+    // typography
+    --color-text: hsl(270, 5%, 20%);
+    --color-text-muted: hsl(270, 5%, 40%);
+    --color-heading: hsl(0, 0%, 0%);
+    // border
+    --color-border: hsl(270, 5%, 80%);
+  }
 `
 
 export default Colors

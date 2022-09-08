@@ -9,16 +9,16 @@ import breakpoint from '../utils/breakpoint'
 const Theme = css`
   :root {
     // Border
-    --border: 2px solid var(--color-border);
+    --border: 1px solid var(--color-border);
 
     // Header
-    --header-width: 4rem;
+    --header-height: 44px;
 
     // Icons
-    --icon-size: 1.75rem;
+    --icon-size: 1.25rem;
 
     // radius
-    --radius: 2rem; // border radius base size
+    --radius: 1rem; // border radius base size
     --radius-xs: calc(var(--radius) / 3);
     --radius-sm: calc(var(--radius) / 2);
     --radius-md: calc(var(--radius) * 2);

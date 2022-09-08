@@ -8,7 +8,7 @@
     "**/index.ts"
   ],
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["*"] // resolve all modules prefixed with `@/` from `src` directory
     },
