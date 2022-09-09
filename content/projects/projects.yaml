@@ -58,3 +58,34 @@
     - ui + ux
     - dev
   website: 'bottlebarn.com'
+
+- title: 'Cannavative'
+  title_detail: 'Cannavative Cannabis Extracts'
+  slug: 'cannavative'
+  year: 2018
+  desc: 'I needed a creative agency at the top of design thinking and leading edge in technical capabilities. core37 was a perfect match. They delivered the perfect end to end digital platform, on time and in full. I loved their creativity, their high quality standards and the strong partnership with my team.'
+  industry: 'cannabis'
+  category: 'design'
+  color: 'green'
+  images: 'cannavative'
+  cover: './cannavative/cover2.jpg'
+  services:
+    - logo identity
+    - packaging
+
+- title: 'Cahuilla Casino Hotel'
+  title_detail: 'Cahuilla Casino Hotel'
+  slug: 'neon'
+  year: 2018
+  desc: 'I needed a creative agency at the top of design thinking and leading edge in technical capabilities. core37 was a perfect match. They delivered the perfect end to end digital platform, on time and in full. I loved their creativity, their high quality standards and the strong partnership with my team.'
+  industry: 'gaming'
+  category: 'brand + digital'
+  color: 'pink'
+  images: 'neon'
+  cover: './neon/cover.jpg'
+  services:
+    - logo identity
+    - branding
+    - ui + ux
+    - dev
+  website: 'cahuillacasinohotel.com'

@@ -20,19 +20,16 @@ export const Projects = styled(motion.div)`
     width: 100%;
 
     @media ${breakpoint.tablet} {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
   .project {
-    margin-bottom: var(--space-xxxl);
+    margin-bottom: var(--space-xl);
 
     &__figure {
-      margin-bottom: var(--gutter);
-
-      img {
-        border-radius: var(--radius-sm);
-      }
+      border-radius: var(--radius-sm);
+      overflow: hidden;
     }
 
     &__meta {
@@ -45,8 +42,9 @@ export const Projects = styled(motion.div)`
 
       .title {
         span {
-          color: var(--color-white);
+          /* color: var(--color-white); */
           margin-left: var(--gutter);
+          transition: color var(--transition);
         }
       }
 
@@ -54,22 +52,37 @@ export const Projects = styled(motion.div)`
         display: flex;
         flex-flow: row wrap;
         align-items: center;
-        gap: var(--space-xxs);
+        /* gap: var(--space-xxs); */
 
         li {
           display: flex;
           place-items: center;
-          padding: var(--space-xxxs) var(--space-sm);
+          padding: var(--space-xxxs) var(--space-xxxs);
 
-          border: var(--border);
+          /* border: var(--border); */
           border-radius: var(--radius-sm);
           white-space: nowrap;
           transition: color var(--transition);
+
+          /* opacity: 0; */
 
           &:hover {
             color: var(--color-white);
           }
         }
+      }
+    }
+
+    &:hover {
+      .title {
+        span {
+          color: var(--color-white);
+          margin-left: var(--gutter);
+        }
+      }
+
+      ul li {
+        opacity: 1;
       }
     }
   }

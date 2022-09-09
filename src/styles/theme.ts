@@ -17,13 +17,17 @@ const Theme = css`
     // Icons
     --icon-size: 1.25rem;
 
-    // radius
+    // Radius
     --radius: 1rem; // border radius base size
     --radius-xs: calc(var(--radius) / 3);
     --radius-sm: calc(var(--radius) / 2);
     --radius-md: calc(var(--radius) * 2);
     --radius-lg: calc(var(--radius) * 4);
     --radius-full: 50%;
+
+    // transitions
+    --transition: 0.175s ease;
+    --transition-all: all var(--transition);
 
     @media ${breakpoint.tablet} {
     }

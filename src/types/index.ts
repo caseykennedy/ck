@@ -28,7 +28,7 @@ export type DribbbleShape = {
 // Project Shape
 // ___________________________________________________________________
 
-type ProjectShapeProject = {
+export type ProjectShapeProject = {
   title_detail: string
   title: string
   color: string
