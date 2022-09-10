@@ -20,8 +20,4 @@ export const Gallery = styled.div`
   @media ${breakpoint.tablet} {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  img {
-    border-radius: var(--radius-sm);
-  }
 `

@@ -54,7 +54,7 @@ const itemVariants = {
 
 const listVariants = {
   open: {
-    transition: { staggerChildren: 0.035, delayChildren: 0.03 },
+    transition: { staggerChildren: 0.05, delayChildren: 0.03 },
   },
   closed: {
     transition: { staggerChildren: 0.05, staggerDirection: -1 },
@@ -130,7 +130,7 @@ const Projects = () => {
             </Link>
             <div className="project__meta">
               <div className="title">
-                {item.year}
+                {/* {item.year} */}
                 <span>
                   <strong>{item.title}</strong>
                 </span>

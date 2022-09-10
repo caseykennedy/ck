@@ -1,7 +1,7 @@
 // HomeView:
-// ___________________________________________________________________
 
 import * as React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 
 // Components
 import Section from '../../components/Section'
@@ -11,6 +11,8 @@ import Marquee from '../../components/Marquee'
 // Sections
 import Hero from './Hero'
 import Intro from './Intro'
+import Aim from './Aim'
+import Approach from './Approach'
 import Projects from './Projects'
 
 // Styles
@@ -18,35 +20,19 @@ import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
-const Approach = () => (
-  <Section border={false}>
-    <S.Split>
-      <div />
-      <div>
-        <h2>
-          Multifaceted
-          <br />
-          Harmonic Design
-          <br />
-          Approach:
-        </h2>
-        <p>
-          Design is much more than it&#39;s visual representation. It is product
-          whole vision from the onset. My practice is based on a multifaceted
-          approach where technical discovery is emphasized and functionality and
-          aesthetic are in balance.
-        </p>
-      </div>
-    </S.Split>
-  </Section>
-)
-
 const Process = () => (
   <Section border={false}>
     <S.Split>
       <div />
+      <div />
       <div>
-        <h2>Out of the box but never out of touch.</h2>
+        <h2>
+          Out of the box
+          <br />
+          but never
+          <br />
+          out of touch.
+        </h2>
         <p>
           I focus on bringing vision to reality. Think, do, try, repeat…
           There&apos;s no magic trick involved. I care about strategy just as
@@ -54,21 +40,6 @@ const Process = () => (
           goal and working relentlessly to reach it.
         </p>
       </div>
-    </S.Split>
-  </Section>
-)
-
-const Aim = () => (
-  <Section border={false}>
-    <S.Split>
-      <div>
-        <h2>
-          My aim is to collaborate with my partners and, through time, build
-          lasting brands and digital experiences.
-        </h2>
-      </div>
-      <div />
-      <div />
     </S.Split>
   </Section>
 )
@@ -113,15 +84,34 @@ const Home = () => (
       <div>prototyping</div>
     </Marquee>
     <Projects />
-    {/* <Intro />
-    <Approach /> */}
-    {/* <Process /> */}
+    <Intro />
+    <Section>
+      <StaticImage
+        src="../../../static/wireframe2.jpg"
+        alt="A dinosaur"
+        placeholder="blurred"
+        objectFit="cover"
+        aspectRatio={2}
+      />
+    </Section>
+
     <Aim />
+
+    <Section>
+      <StaticImage
+        src="../../../static/wireframe3.jpg"
+        alt="A dinosaur"
+        placeholder="blurred"
+        objectFit="cover"
+        aspectRatio={2}
+      />
+    </Section>
+    <Approach />
+    {/* <Process /> */}
     <Section>
       <DribbbleGrid />
     </Section>
-    <Aim2 />
-    {/* <Capabilities /> */}
+    <Aim />
   </S.Home>
 )
 

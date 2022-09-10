@@ -9,7 +9,7 @@ import { breakpoint } from '../../../styles/mixins'
 export const Projects = styled(motion.div)`
   display: flex;
   padding: 0 var(--gutter);
-  margin-bottom: var(--space-xxxxl);
+  margin-bottom: var(--gutter);
 
   .project-grid {
     display: grid;
@@ -20,7 +20,7 @@ export const Projects = styled(motion.div)`
     width: 100%;
 
     @media ${breakpoint.tablet} {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -28,7 +28,7 @@ export const Projects = styled(motion.div)`
     margin-bottom: var(--space-xl);
 
     &__figure {
-      border-radius: var(--radius-sm);
+      /* border-radius: var(--radius-sm); */
       overflow: hidden;
     }
 
@@ -43,7 +43,7 @@ export const Projects = styled(motion.div)`
       .title {
         span {
           /* color: var(--color-white); */
-          margin-left: var(--gutter);
+          /* margin-left: var(--gutter); */
           transition: color var(--transition);
         }
       }
@@ -77,7 +77,6 @@ export const Projects = styled(motion.div)`
       .title {
         span {
           color: var(--color-white);
-          margin-left: var(--gutter);
         }
       }
 

@@ -11,7 +11,6 @@ export const Split = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  height: 80vh;
 
   & > * {
     flex: 1;

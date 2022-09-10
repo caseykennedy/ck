@@ -250,7 +250,7 @@ const Typography = css`
   p {
     ${textCrop(1, 0.05, -0.05)}
 
-    font-size: var(--text-base-size);
+    font-size: var(--text-md);
     line-height: var(--body-line-height);
 
     &:not(:last-child) {

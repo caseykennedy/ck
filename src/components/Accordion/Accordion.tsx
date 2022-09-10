@@ -1,7 +1,10 @@
+/* eslint-disable react/no-danger */
 // Accordion:
 // ___________________________________________________________________
 
 import React, { useCallback, useEffect, useState, useRef } from 'react'
+import { motion } from 'framer-motion'
+
 import Icon from '../Icons'
 import * as S from './styles.scss'
 
@@ -11,71 +14,57 @@ type Props = {
   active?: boolean
   children: React.ReactNode
   title: string
-  color?: string
-  caratColor?: string
-  caratWidth?: string
-  colorActive?: string
-  bg?: string
-  fontSize?: number | number[] | string
-  fontWeight?: number | string
-  pt?: number | number[] | string
-  pb?: number | number[] | string
-  pr?: number | number[] | string
-  pl?: number | number[] | string
 }
 
 // ___________________________________________________________________
 
-const Accordion = ({
-  active,
-  bg,
-  caratColor,
-  caratWidth,
-  children,
-  color,
-  colorActive,
-  fontSize,
-  fontWeight,
-  pt,
-  pb,
-  pr,
-  pl,
-  title,
-}: Props) => {
+const Accordion = ({ active, children, title = 'title' }: Props) => {
   const refToggle = useRef<HTMLDivElement>(null)
   const refContent = useRef<HTMLDivElement>(null)
 
-  let activeState
-  let heightState
-  let rotateState
+  let isActiveState
 
   if (!active) {
-    activeState = ''
-    heightState = '0px'
-    rotateState = 'accordion-icon'
+    isActiveState = false
   } else {
-    activeState = 'active'
-    heightState = '100%'
-    rotateState = 'accordion-icon rotate'
+    isActiveState = true
   }
 
-  const [setActive, setActiveState] = useState(activeState)
-  const [setHeight, setHeightState] = useState(heightState)
-  const [setRotate, setRotateState] = useState(rotateState)
+  const [isActive, setIsActive] = useState(isActiveState)
 
   const toggleAccordion = useCallback(() => {
-    setActiveState(setActive === '' ? 'active' : '')
-    if (refContent !== null) {
-      setHeightState(
-        setActive === 'active'
-          ? '0px'
-          : `${refContent.current && refContent.current.scrollHeight}px`
-      )
-    }
-    setRotateState(
-      setActive === 'active' ? 'accordion-icon' : 'accordion-icon rotate'
-    )
-  }, [setActive])
+    setIsActive(!isActive)
+  }, [isActive])
+
+  const caratVariants = {
+    open: {
+      rotate: '45deg',
+      transition: {
+        rotate: { stiffness: 1000, velocity: -1000 },
+      },
+    },
+    closed: {
+      rotate: '0deg',
+      transition: {
+        rotate: { stiffness: 1000 },
+      },
+    },
+  }
+
+  const containerVariants = {
+    active: {
+      maxHeight: `${refContent.current && refContent.current.scrollHeight}px`,
+      transition: {
+        maxHeight: { stiffness: 100, velocity: -100 },
+      },
+    },
+    disabled: {
+      height: '0px',
+      transition: {
+        height: { stiffness: 100, velocity: -100 },
+      },
+    },
+  }
 
   useEffect(() => {
     const currentToggler = refToggle.current
@@ -84,34 +73,28 @@ const Accordion = ({
   }, [toggleAccordion])
 
   return (
-    <S.AccordionContainer>
+    <S.AccordionContainer
+      initial="active"
+      animate={[isActive ? 'active' : 'disabled']}
+      exit="disabled"
+    >
       <S.AccordionInner>
-        <S.AccordionToggle 
+        <S.AccordionToggle
+          initial="closed"
+          animate={isActive ? 'open' : 'closed'}
           ref={refToggle}
-          className={setActive}
-          color={color}
-          colorActive={colorActive}
-          bg={setActive === 'active' ? bg : 'transparent'}
-          // pt={pt}
-          // pr={pr}
-          // pb={pb}
-          // pl={pl}
         >
-          <div>
-            {title}
-          </div>
-          <S.Carat
-            className={setRotate}
-            caratColor={caratColor}
-            caratWidth={caratWidth}
-          >
-            <Icon name="chevron" />
+          <div dangerouslySetInnerHTML={{ __html: title }} className="title" />
+
+          <S.Carat variants={caratVariants}>
+            <Icon name="plus" />
           </S.Carat>
         </S.AccordionToggle>
+
         <S.AccordionContent
-          // bg={bg}
           ref={refContent}
-          style={{ maxHeight: `${setHeight}` }}
+          variants={containerVariants}
+          // style={{ maxHeight: `${setHeight}` }}
         >
           {children}
         </S.AccordionContent>
@@ -121,15 +104,3 @@ const Accordion = ({
 }
 
 export default Accordion
-
-// ___________________________________________________________________
-
-const defaultProps = {
-  title: 'title',
-  color: 'var(--color-text)',
-  colorActive: 'var(--color-text)',
-  caratColor: 'var(--color-text)',
-  caratWidth: '1rem',
-}
-
-Accordion.defaultProps = defaultProps

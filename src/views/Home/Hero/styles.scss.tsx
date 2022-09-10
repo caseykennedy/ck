@@ -8,11 +8,10 @@ export const Hero = styled(motion.div)`
   display: flex;
   flex-flow: column nowrap;
   height: 75vh;
-  padding-top: var(--space-xxl);
 
   @media ${breakpoint.tablet} {
     flex-flow: row nowrap;
-    justify-content: stre;
+    justify-content: stretch;
   }
 
   .billboard {
@@ -40,6 +39,7 @@ export const Hero = styled(motion.div)`
     flex: 1;
     display: flex;
     gap: var(--gutter);
+    margin-top: var(--header-height);
     padding: var(--gutter);
     position: relative;
     color: var(--color-text-muted);

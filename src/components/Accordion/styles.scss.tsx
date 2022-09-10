@@ -2,30 +2,34 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 import breakpoint from '../../utils/breakpoint'
 
 // ___________________________________________________________________
 
-export const AccordionContainer = styled.div`
-  border: var(--border);
-  border-radius: var(--radius);
-  margin-bottom: var(--gutter);
+export const AccordionContainer = styled(motion.div)`
+  background: var(--black);
+  border-bottom: var(--border);
+  margin-bottom: var(--space-lg);
   position: relative;
   width: 100%;
 `
 
-export const AccordionInner = styled.div<{bg?: string}>`
-  /* background: ${p => p.bg}; */
+export const AccordionInner = styled.div`
   display: flex;
   flex-direction: column;
 `
 
-export const AccordionToggle = styled.div<{ bg?: string, colorActive?: string, color?: string}>`
-display: flex;
-  align-items: center;
+export const AccordionToggle = styled(motion.div)`
+  display: flex;
+  align-items: flex-end;
   justify-content: space-between;
-  color: ${p => p.color};
+  
+  color: var(--color-white);
+  font-size: var(--text-lg);
   cursor: pointer;
+
+  padding: 0 0 var(--space-lg);
 
   outline: none;
   transition: background-color var(--transition-global);
@@ -39,9 +43,9 @@ display: flex;
   }
 `
 
-export const AccordionContent = styled.div`
+export const AccordionContent = styled(motion.div)`
   overflow: hidden;
-  transition: var(--transition-all);
+  /* transition: var(--transition-all); */
 
   .content {
     flex-wrap: wrap;
@@ -50,7 +54,7 @@ export const AccordionContent = styled.div`
   }
 `
 
-export const Carat = styled.div<{ caratColor?: string, caratWidth?: string }>`
+export const Carat = styled(motion.div)`
   display: none;
   transition: var(--transition-all);
 
@@ -65,7 +69,7 @@ export const Carat = styled.div<{ caratColor?: string, caratWidth?: string }>`
   }
 
   svg {
-    fill: ${p => p.caratColor};
-    width: ${p => p.caratWidth ? p.caratWidth : "var(--gutter)"};
+    fill: var(--color-white);
+    width: inherit;
   }
 `

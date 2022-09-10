@@ -19,7 +19,7 @@ const Colors = css`
     --color-text-muted: hsl(270, 5%, 60%);
     --color-heading: hsl(270, 5%, 94%);
     // border
-    --color-border: hsl(0, 0%, 20%);
+    --color-border: var(--color-white);
   }
 
   [data-theme='darkMode'] {
@@ -32,8 +32,6 @@ const Colors = css`
     --color-text: hsl(270, 5%, 20%);
     --color-text-muted: hsl(270, 5%, 40%);
     --color-heading: hsl(0, 0%, 0%);
-    // border
-    --color-border: hsl(270, 5%, 80%);
   }
 `
 
