@@ -22,12 +22,12 @@ const Colors = css`
     --color-border: var(--color-white);
   }
 
-  [data-theme='darkMode'] {
+  [data-theme='lightMode'] {
     --color-black: hsl(0, 0%, 100%);
     --color-white: hsl(0, 0%, 0%);
 
     // background
-    --color-bg: hsl(270, 5%, 90%);
+    --color-bg: hsl(0, 0%, 100%);
     // typography
     --color-text: hsl(270, 5%, 20%);
     --color-text-muted: hsl(270, 5%, 40%);

@@ -33,13 +33,22 @@ const ProjectDetail = ({ data }: ProjectShape) => {
   const images = data.images.edges || []
   return (
     <S.ProjectDetail>
-      <div>
+      <div className="intro">
         <h1>{data.project.title}</h1>
-        <h2>{data.project.title_detail}</h2>
-        <h3>{data.project.desc}</h3>
+        <div>
+          {data.project.services.map((service, idx) => (
+            <span key={idx} className="pill">
+              {service}
+            </span>
+          ))}
+        </div>
       </div>
 
       <Gallery images={images} />
+
+      <div className="study">
+        <p>{data.project.desc}</p>
+      </div>
     </S.ProjectDetail>
   )
 }

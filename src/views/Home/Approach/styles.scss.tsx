@@ -4,9 +4,8 @@ import { breakpoint } from '../../../styles/mixins'
 // ___________________________________________________________________
 
 export const Approach = styled.div`
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-auto-rows: auto;
+  display: flex;
+  align-items: flex-start;
   gap: var(--gutter);
 
   height: 75vh;
@@ -15,8 +14,14 @@ export const Approach = styled.div`
 
   width: 100%;
 
-  @media ${breakpoint.tablet} {
-    grid-template-columns: repeat(2, 1fr);
+  & > div {
+    flex: 1;
+    position: sticky;
+    top: calc(var(--header-height) + calc(var(--gutter) + var(--space-xl)));
+
+    @media ${breakpoint.tablet} {
+      flex: 0.5;
+    }
   }
 
   .accordion-inner {

@@ -20,7 +20,7 @@ const Header = () => {
   const toggleMenu = () => setNavOpen(!isNavOpen)
 
   const toggleTheme = () => {
-    setTheme(theme === 'default' ? 'darkMode' : 'default')
+    setTheme(theme === 'default' ? 'lightMode' : 'default')
     document.documentElement.setAttribute('data-theme', theme)
     localStorage.setItem('theme', theme)
   }
@@ -37,7 +37,9 @@ const Header = () => {
       <S.Header>
         <div className="logo">
           <div className="symbol">
-            <Link to="/" aria-label="Back to index page">Casey Kennedy</Link>
+            <Link to="/" aria-label="Back to index page">
+              Casey Kennedy
+            </Link>
           </div>
         </div>
 

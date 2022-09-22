@@ -30,13 +30,13 @@ const Hero = () => {
       </div>
       <div className="meta">
         <div>
-          Based in Nevada
+          based in nevada
           <br />
           {nevadaTime}
         </div>
         <div>
-          <p>
-            Find me on
+          <div>
+            find me on
             <br />
             <a href="/" target="_blank" rel="noopener">
               GitHub
@@ -49,7 +49,7 @@ const Hero = () => {
             <a href="/" target="_blank" rel="noopener">
               LinkedIn
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </S.Hero>

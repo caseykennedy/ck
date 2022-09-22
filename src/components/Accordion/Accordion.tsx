@@ -1,9 +1,7 @@
 /* eslint-disable react/no-danger */
 // Accordion:
-// ___________________________________________________________________
 
 import React, { useCallback, useEffect, useState, useRef } from 'react'
-import { motion } from 'framer-motion'
 
 import Icon from '../Icons'
 import * as S from './styles.scss'
@@ -40,13 +38,23 @@ const Accordion = ({ active, children, title = 'title' }: Props) => {
     open: {
       rotate: '45deg',
       transition: {
-        rotate: { stiffness: 1000, velocity: -1000 },
+        rotate: {
+          stiffness: 400,
+          velocity: -400,
+          duration: 0.5,
+          ease: 'easeOut',
+        },
       },
     },
     closed: {
       rotate: '0deg',
       transition: {
-        rotate: { stiffness: 1000 },
+        rotate: {
+          stiffness: 400,
+          velocity: -400,
+          duration: 0.5,
+          ease: 'easeOut',
+        },
       },
     },
   }
@@ -55,13 +63,22 @@ const Accordion = ({ active, children, title = 'title' }: Props) => {
     active: {
       maxHeight: `${refContent.current && refContent.current.scrollHeight}px`,
       transition: {
-        maxHeight: { stiffness: 100, velocity: -100 },
+        maxHeight: {
+          duration: 0.5,
+          ease: 'easeOut',
+        },
       },
     },
     disabled: {
+      maxHeight: '0px',
       height: '0px',
       transition: {
-        height: { stiffness: 100, velocity: -100 },
+        maxHeight: {
+          stiffness: 400,
+          velocity: -400,
+          duration: 0.5,
+          ease: 'easeOut',
+        },
       },
     },
   }

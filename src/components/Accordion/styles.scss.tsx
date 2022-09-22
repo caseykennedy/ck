@@ -24,12 +24,13 @@ export const AccordionToggle = styled(motion.div)`
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  
+
   color: var(--color-white);
   font-size: var(--text-lg);
+  font-weight: 600;
   cursor: pointer;
 
-  padding: 0 0 var(--space-lg);
+  padding: 0 0 var(--space-xs);
 
   outline: none;
   transition: background-color var(--transition-global);
@@ -55,13 +56,9 @@ export const AccordionContent = styled(motion.div)`
 `
 
 export const Carat = styled(motion.div)`
-  display: none;
+  display: flex;
+  align-items: center;
   transition: var(--transition-all);
-
-  @media ${breakpoint.tablet} {
-    display: flex;
-    align-items: center;
-  }
 
   &.rotate {
     transform-origin: center;

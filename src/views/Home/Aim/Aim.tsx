@@ -14,30 +14,54 @@ import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
-const Aim = () => {
-  const nevadaTime = useDate()
-  return (
-    <S.Aim>
-      <div className="billboard">
-        <div>
-          <h2>
-            My aim is to collaborate with my partners and, through time, build
-            lasting brands and digital experiences.
-          </h2>
-        </div>
+const Aim = () => (
+  <S.Aim>
+    <div className="billboard">
+      <div>
+        <h2>
+          My aim is to build lasting products and positively impact others through creative experience.
+        </h2>
       </div>
-      <div className="meta">
-        Based in Nevada
-        <br />
-        {nevadaTime}
-      </div>
-      <div className="meta">
-        Based in Nevada
-        <br />
-        {nevadaTime}
-      </div>
-    </S.Aim>
-  )
-}
+    </div>
+    <div className="meta">
+      <h4>capabilities</h4>
+      <br />
+      web + app development
+      <br />
+      ui + ux
+      <br />
+      design systems
+      <br />
+      visual design
+      <br />
+      prototyping
+      <br />
+      logo identity
+      <br />
+      packaging
+      <br />
+      events + festivals
+    </div>
+    <div className="meta">
+      <h4>tech</h4>
+      <br />
+      react / vue
+      <br />
+      web3 / crypto
+      <br />
+      gatsby / next / nuxt
+      <br />
+      javascript (ts)
+      <br />
+      html + css
+      <br />
+      graphQL
+      <br />
+      shopify
+      <br />
+      headless
+    </div>
+  </S.Aim>
+)
 
 export default Aim
