@@ -19,23 +19,23 @@ const Intro = () => {
   return (
     <S.Intro>
       <div className="billboard">
+        <h2>
+          I&apos;ve been practicing design and development for over 14 years and
+          independently consulting for over 8 years. Collaborating with
+          startups, established brands and anyone with a great idea.
+        </h2>
+      </div>
+      <div className="meta">
         <div>
-          <h2>
-            I’ve been practicing design and development for over 14 years
-            and independently consulting for over 8 years. Collaborating with
-            startups, established brands and anyone with a great idea.
-          </h2>
+          Based in Nevada
+          <br />
+          {nevadaTime}
         </div>
-      </div>
-      <div className="meta">
-        Based in Nevada
-        <br />
-        {nevadaTime}
-      </div>
-      <div className="meta">
-        Based in Nevada
-        <br />
-        {nevadaTime}
+        <div>
+          Based in Nevada
+          <br />
+          {nevadaTime}
+        </div>
       </div>
     </S.Intro>
   )

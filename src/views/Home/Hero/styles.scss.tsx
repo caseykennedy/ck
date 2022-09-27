@@ -42,7 +42,6 @@ export const Hero = styled(motion.div)`
     margin-top: var(--header-height);
     padding: var(--gutter);
     position: relative;
-    color: var(--color-text-muted);
 
     & > * {
       flex: 1;

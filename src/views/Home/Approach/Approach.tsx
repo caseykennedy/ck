@@ -35,8 +35,8 @@ const Approach = () => {
               in balance. */}
               I believe that design is much more than what you see, it is
               product whole vision from the start. My practice is based on a
-              design-first approach—where research &amp; discovery are just as
-              important as functionality &amp; aesthetic.
+              design-first approach—where research and discovery are just as
+              important as functionality and aesthetic.
             </p>
           </div>
         </Accordion>

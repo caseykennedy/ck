@@ -29,7 +29,7 @@ const Layout = ({ children }: LayoutProps) => {
   )
   return (
     <S.Wrapper>
-      {/* <Cursor /> */}
+      <Cursor />
       <Header />
       <S.Content>
         {/* <SmoothScroll>{children}</SmoothScroll> */}

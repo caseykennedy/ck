@@ -181,7 +181,7 @@ const Typography = css`
 
   body,
   html {
-    color: var(--color-text-muted);
+    color: var(--color-text);
     font-family: var(--font-primary);
     font-size: var(--text-base-size);
     font-weight: var(--body-font-weight);

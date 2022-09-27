@@ -24,13 +24,13 @@ const imageVariants = {
   large: {
     y: 0,
     transition: {
-      y: { stiffness: 1000, velocity: -1000 },
+      y: { stiffness: 400, velocity: -400, duration: 0.25, ease: 'easeInOut' },
     },
   },
   small: {
     y: -11,
     transition: {
-      y: { stiffness: 1000 },
+      y: { stiffness: 400, velocity: -400, duration: 0.25, ease: 'easeInOut' },
     },
   },
 }
@@ -40,14 +40,14 @@ const itemVariants = {
     y: 0,
     opacity: 1,
     transition: {
-      y: { stiffness: 1000, velocity: -1000 },
+      y: { stiffness: 400, velocity: -400, duration: 0.25, ease: 'easeInOut' },
     },
   },
   closed: {
     y: 25,
     opacity: 0,
     transition: {
-      y: { stiffness: 1000 },
+      y: { stiffness: 400, velocity: -400, duration: 0.25, ease: 'easeInOut' },
     },
   },
 }

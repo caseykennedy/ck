@@ -41,8 +41,8 @@ const Accordion = ({ active, children, title = 'title' }: Props) => {
         rotate: {
           stiffness: 400,
           velocity: -400,
-          duration: 0.5,
-          ease: 'easeOut',
+          duration: 0.25,
+          ease: 'easeInOut',
         },
       },
     },
@@ -52,8 +52,8 @@ const Accordion = ({ active, children, title = 'title' }: Props) => {
         rotate: {
           stiffness: 400,
           velocity: -400,
-          duration: 0.5,
-          ease: 'easeOut',
+          duration: 0.25,
+          ease: 'easeInOut',
         },
       },
     },
@@ -64,8 +64,8 @@ const Accordion = ({ active, children, title = 'title' }: Props) => {
       maxHeight: `${refContent.current && refContent.current.scrollHeight}px`,
       transition: {
         maxHeight: {
-          duration: 0.5,
-          ease: 'easeOut',
+          duration: 0.25,
+          ease: 'easeInOut',
         },
       },
     },
@@ -76,8 +76,8 @@ const Accordion = ({ active, children, title = 'title' }: Props) => {
         maxHeight: {
           stiffness: 400,
           velocity: -400,
-          duration: 0.5,
-          ease: 'easeOut',
+          duration: 0.25,
+          ease: 'easeInOut',
         },
       },
     },
