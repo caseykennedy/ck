@@ -1,8 +1,9 @@
 // Header
 // ___________________________________________________________________
 
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
+import { useDarkMode } from 'usehooks-ts'
 
 // Components
 import Icon from '../Icons'
@@ -15,42 +16,24 @@ import * as S from './styles.scss'
 // ___________________________________________________________________
 
 const Header = () => {
-  const [theme, setTheme] = useState('default')
-  const [isNavOpen, setNavOpen] = useState(false)
-  const toggleMenu = () => setNavOpen(!isNavOpen)
-
-  const toggleTheme = () => {
-    setTheme(theme === 'default' ? 'lightMode' : 'default')
-    document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('theme', theme)
-  }
-
-  useEffect(() => {
-    const localTheme = localStorage.getItem('theme')
-    if (localTheme) {
-      document.documentElement.setAttribute('data-theme', localTheme)
-    }
-  }, [])
+  const { toggle } = useDarkMode(true)
+  // const [isNavOpen, setNavOpen] = useState(false)
+  // const toggleMenu = () => setNavOpen(!isNavOpen)
 
   return (
     <>
       <S.Header>
         <div className="logo">
-          <div className="symbol">
-            <Link to="/" aria-label="Back to index page">
-              Casey Kennedy
-            </Link>
-          </div>
+          <Link to="/" aria-label="Back to index page">
+            Casey Kennedy
+          </Link>
         </div>
 
-        <button
-          type="button"
-          onClick={toggleTheme}
-          onKeyDown={toggleTheme}
-          className="yinyang btn"
-        >
-          ◒
-        </button>
+        <div className="utils">
+          <button type="button" onClick={toggle} className="theme-toggle">
+            ◒
+          </button>
+        </div>
       </S.Header>
 
       {/* <Modal open={isNavOpen} close={toggleMenu}>

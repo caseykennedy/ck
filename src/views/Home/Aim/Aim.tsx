@@ -42,7 +42,7 @@ const Aim = () => (
         <br />
         events + festivals
       </div>
-      <div>
+      {/* <div>
         <h4>tech</h4>
         <br />
         react / vue
@@ -60,7 +60,9 @@ const Aim = () => (
         shopify
         <br />
         headless
-      </div>
+        <br />
+        etc...
+      </div> */}
     </div>
   </S.Aim>
 )

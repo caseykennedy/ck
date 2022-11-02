@@ -10,29 +10,6 @@ import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
-const routes = [
-  {
-    name: 'Pre-register',
-    link: '/search',
-  },
-  {
-    name: 'How it works',
-    link: '/how-it-works',
-  },
-  {
-    name: 'Why .nft?',
-    link: '/why-nft',
-  },
-  {
-    name: 'Policies',
-    link: '/policies',
-  },
-  {
-    name: 'FAQs',
-    link: '/faq',
-  },
-]
-
 const itemVariants = {
   open: {
     y: 0,
@@ -61,7 +38,7 @@ const listVariants = {
 
 type LinkProps = {
   item: {
-    link: string,
+    link: string
     name: string
   }
   handleExitOnClick: () => void
@@ -85,9 +62,15 @@ type NavProps = {
 const MobileNav = ({ handleExitOnClick, isOpen }: NavProps) => (
   <motion.div initial="closed" animate={isOpen ? 'open' : 'closed'}>
     <S.MobileNav variants={listVariants}>
-      {routes.map((item, idx) => (
+      <div className="content">
+        <button type="button" onClick={handleExitOnClick} className="exit">
+          exit
+        </button>
+        <motion.div variants={itemVariants}>namelayer auctions info</motion.div>
+      </div>
+      {/* {routes.map((item, idx) => (
         <NavLink key={idx} handleExitOnClick={handleExitOnClick} item={item} />
-      ))}
+      ))} */}
     </S.MobileNav>
   </motion.div>
 )

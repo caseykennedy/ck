@@ -7,41 +7,10 @@
   category: 'design'
   color: 'green'
   images: 'cannavative'
-  cover: './cannavative/cover2.jpg'
+  cover: './cannavative/09bcopy.png'
   services:
     - logo identity
     - packaging
-
-- title: 'Cahuilla Casino Hotel'
-  title_detail: 'Cahuilla Casino Hotel'
-  slug: 'neon'
-  year: 2018
-  desc: 'I needed a creative agency at the top of design thinking and leading edge in technical capabilities. core37 was a perfect match. They delivered the perfect end to end digital platform, on time and in full. I loved their creativity, their high quality standards and the strong partnership with my team.'
-  industry: 'gaming'
-  category: 'brand + digital'
-  color: 'pink'
-  images: 'neon'
-  cover: './neon/cover.jpg'
-  services:
-    - logo identity
-    - branding
-    - ui + ux
-    - dev
-  website: 'cahuillacasinohotel.com'
-
-- title: 'Blackbird'
-  title_detail: 'Blackbird Cannabis Logistics'
-  slug: 'blackbird'
-  year: 2018
-  desc: 'I needed a creative agency at the top of design thinking and leading edge in technical capabilities. core37 was a perfect match. They delivered the perfect end to end digital platform, on time and in full. I loved their creativity, their high quality standards and the strong partnership with my team.'
-  industry: 'cannabis'
-  category: '2017'
-  color: 'white'
-  images: 'blackbird'
-  cover: './blackbird/cover.png'
-  services:
-    - ui + ux
-    - prototyping
 
 - title: 'Bottle Barn'
   title_detail: 'Bottle Barn Wine & Spirits'
@@ -52,7 +21,7 @@
   category: 'design + development'
   color: '#82726b'
   images: 'bottle-barn'
-  cover: './bottle-barn/cover.jpg'
+  cover: './bottle-barn/bb__packaging.jpg'
   services:
     - logo identity
     - ui + ux

@@ -7,19 +7,20 @@ import { css } from 'styled-components'
 
 const Colors = css`
   :root,
-  [data-theme='default'] {
+  [data-theme='darkMode'] {
     // base
     --color-black: hsl(0, 0%, 0%);
     --color-white: hsl(0, 0%, 100%);
 
     // background
-    --color-bg: hsl(0, 0%, 0%);
+    --color-bg: hsl(240, 5%, 5%);
+    --color-bg-dark: hsl(240, 4%, 5%);
     // typography
-    --color-text: hsl(270, 5%, 80%);
-    --color-text-muted: hsl(270, 5%, 60%);
-    --color-heading: hsl(270, 5%, 94%);
+    --color-text: hsl(245, 8%, 78%);
+    --color-text-muted: hsl(245, 8%, 58%);
+    --color-heading: hsl(245, 8%, 92%);
     // border
-    --color-border: var(--color-white);
+    --color-border: hsl(240, 5%, 16%);
   }
 
   [data-theme='lightMode'] {

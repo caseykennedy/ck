@@ -1,10 +1,9 @@
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 import { breakpoint } from '../../../styles/mixins'
 
 // ___________________________________________________________________
 
-export const Hero = styled(motion.div)`
+export const Hero = styled.div`
   display: flex;
   flex-flow: column nowrap;
   height: 75vh;
@@ -56,4 +55,18 @@ export const Hero = styled(motion.div)`
   }
 `
 
-export default Hero
+export const Tetra = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* z-index: -1; */
+
+  div {
+    /* height: 80% !important; */
+  }
+`

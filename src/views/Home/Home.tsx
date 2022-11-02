@@ -53,7 +53,7 @@ const Home = () => (
         alt="A dinosaur"
         placeholder="blurred"
         objectFit="cover"
-        aspectRatio={2}
+        aspectRatio={1.75}
       />
     </Section>
 
@@ -65,7 +65,7 @@ const Home = () => (
         alt="A dinosaur"
         placeholder="blurred"
         objectFit="cover"
-        aspectRatio={2}
+        aspectRatio={1.75}
       />
     </Section>
     <Approach />
