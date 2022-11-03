@@ -32,12 +32,11 @@ const Outro = () => {
       <div className="meta">
         <div>
           <h4>contact</h4>
-          <br />
           <a href="/" target="_blank" rel="noopener">
             me@caseykennedy.me
           </a>
         </div>
-        <div>
+        {/* <div>
           <h4>social</h4>
           <br />
           <a href="/" target="_blank" rel="noopener">
@@ -49,7 +48,7 @@ const Outro = () => {
           <a href="/" target="_blank" rel="noopener">
             LinkedIn
           </a>
-        </div>
+        </div> */}
       </div>
     </S.Outro>
   )

@@ -27,14 +27,20 @@ const Intro = () => {
       </div>
       <div className="meta">
         <div>
-          Based in Nevada
+          <h4>experience</h4>
+          atlantis casino
           <br />
-          {nevadaTime}
-        </div>
-        <div>
-          Based in Nevada
+          noip.com
           <br />
-          {nevadaTime}
+          medium advertising
+          <br />
+          tetra/
+          <br />
+          miner token
+          <br />
+          dWeb foundation
+          <br />
+          bob wallet
         </div>
       </div>
     </S.Intro>

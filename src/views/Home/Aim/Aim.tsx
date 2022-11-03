@@ -18,8 +18,8 @@ const Aim = () => (
   <S.Aim>
     <div className="billboard">
       <h2>
-        My aim is to build lasting products and positively impact others through
-        creative experience.
+        My aim is to combine form with function and positively impact others
+        through creative experience.
       </h2>
     </div>
     <div className="meta">

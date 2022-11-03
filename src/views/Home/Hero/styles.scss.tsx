@@ -7,6 +7,8 @@ export const Hero = styled.div`
   display: flex;
   flex-flow: column nowrap;
   height: 75vh;
+  position: relative;
+  z-index: 1;
 
   @media ${breakpoint.tablet} {
     flex-flow: row nowrap;
@@ -52,6 +54,10 @@ export const Hero = styled.div`
       position: sticky;
       top: var(--header-height);
     }
+
+    span {
+      color: var(--color-text-muted);
+    }
   }
 `
 
@@ -64,9 +70,9 @@ export const Tetra = styled.div`
   left: 0;
   height: 100%;
   width: 100%;
-  /* z-index: -1; */
+  z-index: 0;
 
-  div {
-    /* height: 80% !important; */
-  }
+  /* div {
+    height: 80% !important;
+  } */
 `

@@ -25,9 +25,15 @@ const Hero = () => {
         <div className="billboard">
           <div>
             <h1>
-              Helping people build
+              {/* Helping brands develop
               <br />
-              cutting-edge digital products.
+              cutting-edge digital experiences. */}
+              I collab with startups and upstarts, together we build
+              cutting-edge applications.
+              <br />
+              <br />I believe the next generation of the internet (web3) will be
+              owned by the people and therefore seek out projects which enrich
+              the world.
             </h1>
           </div>
         </div>
@@ -35,7 +41,7 @@ const Hero = () => {
           <div>
             based in nevada
             <br />
-            {nevadaTime}
+            <span>{nevadaTime}</span>
           </div>
           <div>
             <div>
@@ -74,16 +80,17 @@ const Hero = () => {
           <TetraGeo
             flatShading={false}
             position={[0, 1, 0]}
-            radius={3}
-            speed={1}
+            radius={0.5}
+            detail={0.1}
+            speed={0.001}
             wireframe={false}
           />
           <TetraGeo
             flatShading={false}
             position={[0, 1, 0]}
-            radius={4}
-            detail={1}
-            speed={0.0003}
+            radius={3}
+            detail={0.75}
+            speed={0.0009}
             wireframe={true}
           />
         </Canvas>
