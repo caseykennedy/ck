@@ -28,8 +28,8 @@ const Hero = () => {
               {/* Helping brands develop
               <br />
               cutting-edge digital experiences. */}
-              I collab with people, startups and upstarts—together we build
-              cutting-edge apps.
+              I collab with people, teams and visionaries—together we build
+              cutting-edge products.
             </h1>
           </div>
         </div>
