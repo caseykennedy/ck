@@ -26,6 +26,46 @@ const Intro = () => {
         </h2>
       </div>
       <div className="meta">
+      <div>
+        <h4>capabilities</h4>
+        <br />
+        web + app development
+        <br />
+        ui + ux
+        <br />
+        design systems
+        <br />
+        visual design
+        <br />
+        prototyping
+        <br />
+        logo identity
+        <br />
+        packaging
+        <br />
+        events + festivals
+      </div>
+      <div>
+        <h4>tech</h4>
+        <br />
+        react / vue
+        <br />
+        web3 / ethers
+        <br />
+        gatsby / next
+        <br />
+        javascript (ts)
+        <br />
+        html + css
+        <br />
+        graphQL
+        <br />
+        shopify
+        <br />
+        headless
+        <br />
+        etc...
+      </div>
         {/* <div>
           <h4>experience</h4>
           atlantis casino

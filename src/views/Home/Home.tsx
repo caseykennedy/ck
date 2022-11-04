@@ -45,7 +45,10 @@ const Home = () => (
       <div>wireframing</div>
       <div>prototyping</div>
     </Marquee>
-    <Projects />
+    {/* <Projects /> */}
+    <Section>
+      <DribbbleGrid />
+    </Section>
     <Intro />
     <Section>
       <StaticImage
@@ -57,7 +60,9 @@ const Home = () => (
       />
     </Section>
 
-    <Aim />
+    {/* <Aim /> */}
+    <Approach />
+    {/* <Process /> */}
 
     <Section>
       <StaticImage
@@ -68,11 +73,7 @@ const Home = () => (
         aspectRatio={1.75}
       />
     </Section>
-    <Approach />
-    {/* <Process /> */}
-    <Section>
-      <DribbbleGrid />
-    </Section>
+
     {/* <Sites /> */}
     <Outro />
   </S.Home>

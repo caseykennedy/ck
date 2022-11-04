@@ -31,7 +31,7 @@ const DribbbleGrid = () => {
             name
             childImageSharp {
               gatsbyImageData(
-                aspectRatio: 1.444
+                aspectRatio: 1.55
                 backgroundColor: ""
                 formats: WEBP
                 layout: FULL_WIDTH
@@ -46,7 +46,7 @@ const DribbbleGrid = () => {
   const dribbbles = data.content.edges
   return (
     <S.DribbbleGrid>
-      {dribbbles.slice(0, 24).map(({ node: drib }, idx) => (
+      {dribbbles.slice(0, 36).map(({ node: drib }, idx) => (
         <GatsbyImage
           image={drib.childImageSharp.gatsbyImageData}
           objectFit="cover"

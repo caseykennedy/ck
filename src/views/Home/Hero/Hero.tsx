@@ -29,11 +29,11 @@ const Hero = () => {
               <br />
               cutting-edge digital experiences. */}
               I collab with startups and upstarts, together we build
-              cutting-edge applications.
+              cutting-edge front ends.
               <br />
               <br />I believe the next generation of the internet (web3) will be
-              owned by the people and therefore seek out projects which enrich
-              the world.
+              owned by the people and therefore seek out projects which
+              decentralize the internet.
             </h1>
           </div>
         </div>
@@ -47,15 +47,27 @@ const Hero = () => {
             <div>
               find me on
               <br />
-              <a href="/" target="_blank" rel="noopener">
+              <a
+                href="https://github.com/caseykennedy"
+                target="_blank"
+                rel="noreferrer"
+              >
                 GitHub
               </a>{' '}
               /{' '}
-              <a href="/" target="_blank" rel="noopener">
+              <a
+                href="https://dribbble.com/caseykennedy"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Dribbble
               </a>{' '}
               /{' '}
-              <a href="/" target="_blank" rel="noopener">
+              <a
+                href="https://www.linkedin.com/in/casey-kennedy-0b123727/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 LinkedIn
               </a>
             </div>
