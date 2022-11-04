@@ -7,7 +7,7 @@ import { breakpoint } from '../../../styles/mixins'
 export const Intro = styled(motion.div)`
   display: flex;
   flex-flow: column nowrap;
-  height: 75vh;
+  min-height: 75vh;
   padding: var(--gutter);
 
   @media ${breakpoint.tablet} {

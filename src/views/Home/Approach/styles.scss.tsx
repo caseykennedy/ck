@@ -8,7 +8,7 @@ export const Approach = styled.div`
   align-items: flex-start;
   gap: var(--gutter);
 
-  height: 75vh;
+  min-height: 75vh;
   padding: var(--gutter);
   position: relative;
 

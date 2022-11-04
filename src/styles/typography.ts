@@ -53,8 +53,12 @@ const Typography = css`
 
     // font size
     --text-root-size: 1rem;
-    --text-base-size: 1.25rem; // body font-size
+    --text-base-size: 1rem; // body font-size
     --text-scale-ratio: 1.25; // multiplier used to generate the type scale values 👇
+
+    @media ${breakpoint.tablet} {
+      --text-base-size: 1.25rem; // body font-size
+    }
 
     // font weight
     --body-font-weight: 600;
@@ -73,10 +77,6 @@ const Typography = css`
 
     // unit - don't modify unless you want to change the typography unit (e.g., from Rem to Em units)
     --text-unit: var(--text-base-size); // if Em units → --text-unit: 1em;
-
-    // @include breakpoint(sm) {
-    //   --text-base-size: 1rem;
-    // }
   }
 
   :root,
