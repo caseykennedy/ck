@@ -22,7 +22,7 @@ export const Intro = styled(motion.div)`
     position: relative;
 
     h2 {
-      max-width: 36ch;
+      max-inline-size: 43ch;
       position: sticky;
       top: calc(var(--header-height) + calc(var(--gutter) + var(--space-xl)));
     }
@@ -46,6 +46,14 @@ export const Intro = styled(motion.div)`
       align-items: flex-end;
       justify-content: flex-end;
       text-align: right;
+
+      &:last-child {
+        margin-top: var(--space-md);
+      }
+
+      @media ${breakpoint.tablet} {
+        margin-top: 0;
+      }
     }
   }
 `

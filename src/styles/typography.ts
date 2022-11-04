@@ -53,11 +53,11 @@ const Typography = css`
 
     // font size
     --text-root-size: 1rem;
-    --text-base-size: 1.15rem; // body font-size
+    --text-base-size: 1rem; // body font-size
     --text-scale-ratio: 1.25; // multiplier used to generate the type scale values 👇
 
     @media ${breakpoint.tablet} {
-      --text-base-size: 1.25rem; // body font-size
+      --text-base-size: 0.975rem; // body font-size
     }
 
     // font weight
@@ -182,7 +182,7 @@ const Typography = css`
   body,
   html {
     color: var(--color-text);
-    font-family: var(--font-secondary);
+    font-family: var(--font-sans);
     font-size: var(--text-base-size);
     font-weight: var(--body-font-weight);
     line-height: var(--body-line-height);
@@ -205,7 +205,7 @@ const Typography = css`
     ${textCrop(1, 0.05, -0.05)}
 
     color: var(--color-heading);
-    font-family: var(--font-secondary);
+    font-family: var(--font-sans);
     font-weight: var(--heading-font-weight);
     line-height: var(--heading-line-height);
   }
@@ -250,7 +250,7 @@ const Typography = css`
   p {
     ${textCrop(1, 0.05, -0.05)}
 
-    font-size: var(--text-sm);
+    font-size: var(--text-md);
     line-height: var(--body-line-height);
 
     &:not(:last-child) {

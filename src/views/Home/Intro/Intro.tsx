@@ -32,30 +32,28 @@ const Intro = () => {
         <div>
           <h4>capabilities</h4>
           <br />
-          web + app development
+          web / app development
           <br />
-          ui + ux
+          ui+ux
           <br />
           design systems
           <br />
           visual design
           <br />
-          prototyping
+          wireframing / prototyping
           <br />
           logo identity
-          <br />
-          packaging
-          <br />
-          events + festivals
         </div>
         <div>
-          <h4>tech</h4>
+          <h4>expertise</h4>
           <br />
-          react / vue
-          <br />
-          web3 / ethers
+          react / redux
           <br />
           gatsby / next
+          <br />
+          vue / nuxt
+          <br />
+          web3 / ethers
           <br />
           javascript (ts)
           <br />
@@ -66,8 +64,6 @@ const Intro = () => {
           shopify
           <br />
           headless
-          <br />
-          etc...
         </div>
         {/* <div>
           <h4>experience</h4>
