@@ -47,6 +47,15 @@ export const Outro = styled(motion.div)`
       justify-content: flex-end;
       text-align: right;
     }
+
+    a {
+      font-size: var(--text-lg);
+      margin-bottom: var(--gutter);
+
+      @media ${breakpoint.tablet} {
+        margin-bottom: 0;
+      }
+    }
   }
 `
 
