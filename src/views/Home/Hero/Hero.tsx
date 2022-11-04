@@ -28,12 +28,8 @@ const Hero = () => {
               {/* Helping brands develop
               <br />
               cutting-edge digital experiences. */}
-              I collab with startups and upstarts, together we build
-              cutting-edge front ends.
-              <br />
-              <br />I believe the next generation of the internet (web3) will be
-              owned by the people and therefore seek out projects which
-              decentralize the internet.
+              I collab with people, startups and upstarts—together we build
+              cutting-edge apps.
             </h1>
           </div>
         </div>

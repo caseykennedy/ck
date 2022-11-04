@@ -20,13 +20,10 @@ const Outro = () => {
     <S.Outro>
       <div className="billboard">
         <h2>
-          I work with my good mates Chris and Taylor over at{' '}
-          <a href="https://tetrashapes.com" target="_blank" rel="noreferrer">
-            /tetra
-          </a>{' '}
-          where we build blockchain dApps and design future-proof crypto brands.
-          If you have a project or idea you&apos;d like to discuss, shoot me an
-          email.
+          If you have a project or idea you&apos;d like to discuss, please{' '}
+          <a href="mailto:me@caseykennedy.me" target="_blank" rel="noreferrer">
+            reach out!
+          </a>
         </h2>
       </div>
       <div className="meta">

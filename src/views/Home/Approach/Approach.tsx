@@ -21,8 +21,7 @@ const Approach = () => {
     <S.Approach>
       <div>
         <Accordion
-          title="Multifaceted
-              <br />
+          title="
               Harmonic Design
               <br />
               Approach:"
@@ -43,9 +42,7 @@ const Approach = () => {
         <Accordion
           title="Out of the box
           <br />
-          but never
-          <br />
-          out of touch."
+          but never out of touch."
         >
           <div className="accordion-inner">
             <p>
