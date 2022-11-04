@@ -26,7 +26,7 @@ const Intro = () => {
         </h2>
       </div>
       <div className="meta">
-        <div>
+        {/* <div>
           <h4>experience</h4>
           atlantis casino
           <br />
@@ -41,7 +41,16 @@ const Intro = () => {
           dWeb foundation
           <br />
           bob wallet
-        </div>
+        </div> */}
+        {/* <div>
+          I can help with:
+          <br />
+          Defining a bold creative vision
+          <br />
+          Creating a visual identity that gets noticed
+          <br />
+          Evolving your current brand Look and feel
+        </div> */}
       </div>
     </S.Intro>
   )

@@ -17,10 +17,7 @@ import * as S from './styles.scss'
 const Aim = () => (
   <S.Aim>
     <div className="billboard">
-      <h2>
-        My aim is to combine form with function and positively impact others
-        through creative experience.
-      </h2>
+      <h2>I aim to combine function with aesthetic for a fluid experience.</h2>
     </div>
     <div className="meta">
       <div>
@@ -42,14 +39,14 @@ const Aim = () => (
         <br />
         events + festivals
       </div>
-      {/* <div>
+      <div>
         <h4>tech</h4>
         <br />
         react / vue
         <br />
-        web3 / crypto
+        web3 / ethers
         <br />
-        gatsby / next / nuxt
+        gatsby / next
         <br />
         javascript (ts)
         <br />
@@ -62,7 +59,7 @@ const Aim = () => (
         headless
         <br />
         etc...
-      </div> */}
+      </div>
     </div>
   </S.Aim>
 )

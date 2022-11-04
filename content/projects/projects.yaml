@@ -27,3 +27,18 @@
     - ui + ux
     - dev
   website: 'bottlebarn.com'
+
+- title: 'Blackbird'
+  title_detail: 'Blackbird Cannabis Logistics'
+  slug: 'blackbird'
+  year: 2019
+  desc: Bottle Barn is Sonoma County's largest discount wine and spirits shop. Their goal was to bring their shop online. We designed them a humble identity and a custom Shopify theme and delivered a fully functional, ent to end digital platform to sell wine and keep in touch with their shoppers.
+  industry: 'logistics'
+  category: 'design + development'
+  color: '#82726b'
+  images: 'blackbird'
+  cover: './blackbird/bb-v15.png'
+  services:
+    - prototyping
+    - ui + ux
+    - dev
