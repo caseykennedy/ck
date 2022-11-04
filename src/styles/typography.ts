@@ -57,7 +57,7 @@ const Typography = css`
     --text-scale-ratio: 1.25; // multiplier used to generate the type scale values 👇
 
     // font weight
-    --body-font-weight: 400;
+    --body-font-weight: 600;
     --heading-font-weight: 600;
 
     // line-height
@@ -250,7 +250,7 @@ const Typography = css`
   p {
     ${textCrop(1, 0.05, -0.05)}
 
-    font-size: var(--text-md);
+    font-size: var(--text-sm);
     line-height: var(--body-line-height);
 
     &:not(:last-child) {
@@ -264,7 +264,7 @@ const Typography = css`
   }
 
   a {
-    color: var(--color-text-muted);
+    color: var(--color-text);
     text-decoration: none;
     transition: var(--transition-all);
 

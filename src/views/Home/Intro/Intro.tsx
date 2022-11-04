@@ -20,11 +20,12 @@ const Intro = () => {
     <S.Intro>
       <div className="billboard">
         <h2>
-          Not your ordinary front-end developer—I come with a background in visual design
-          and have made my way through a broad range of industries throughout my
-          career. Some of these include ad agencies, DNS companies, registrars,
-          casino&apos;s, print shops and music events where deliverables ranged
-          from posters and stationery to websites and mobile apps.
+          Not your ordinary front-end developer—I come with a background in
+          visual design and have made my way through a broad range of industries
+          throughout my career. Some of these include ad agencies, DNS
+          companies, crypto swaps, registrars, casino&apos;s, print shops and
+          music events where deliverables ranged from posters and stationery to
+          websites, apps and chrome extensions.
         </h2>
       </div>
       <div className="meta">
