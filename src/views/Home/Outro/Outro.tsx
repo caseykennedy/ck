@@ -20,10 +20,9 @@ const Outro = () => {
     <S.Outro>
       <div className="billboard">
         <h2>
-          If you have a project or idea you&apos;d like to discuss, please{' '}
-          <a href="mailto:me@caseykennedy.me" target="_blank" rel="noreferrer">
-            reach out!
-          </a>
+          My promise is simple—no matter who I work with and what I create, I
+          always aim high, do it right and make it real. I believe in quality
+          design, attention to detail and tangible results.
         </h2>
       </div>
       <div className="meta">
