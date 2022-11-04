@@ -53,7 +53,7 @@ const Typography = css`
 
     // font size
     --text-root-size: 1rem;
-    --text-base-size: 1rem; // body font-size
+    --text-base-size: 1.25rem; // body font-size
     --text-scale-ratio: 1.25; // multiplier used to generate the type scale values 👇
 
     // font weight
@@ -182,7 +182,7 @@ const Typography = css`
   body,
   html {
     color: var(--color-text);
-    font-family: var(--font-primary);
+    font-family: var(--font-secondary);
     font-size: var(--text-base-size);
     font-weight: var(--body-font-weight);
     line-height: var(--body-line-height);
@@ -205,7 +205,7 @@ const Typography = css`
     ${textCrop(1, 0.05, -0.05)}
 
     color: var(--color-heading);
-    font-family: var(--font-sans);
+    font-family: var(--font-secondary);
     font-weight: var(--heading-font-weight);
     line-height: var(--heading-line-height);
   }
