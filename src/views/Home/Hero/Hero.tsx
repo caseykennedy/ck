@@ -48,7 +48,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                GitHub
+                github
               </a>{' '}
               /{' '}
               <a
@@ -56,7 +56,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Dribbble
+                dribbble
               </a>{' '}
               /{' '}
               <a
@@ -64,7 +64,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                LinkedIn
+                linkedin
               </a>
             </div>
           </div>

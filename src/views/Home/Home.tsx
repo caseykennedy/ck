@@ -44,6 +44,7 @@ const Home = () => (
       <div>software developer</div>
       <div>available for freelance</div>
       <div>decentralize the internet</div>
+      <div>collaborate with me</div>
     </Marquee>
     {/* <Projects /> */}
     <Section>

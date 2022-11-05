@@ -49,8 +49,8 @@ export const Outro = styled(motion.div)`
     }
 
     a {
-      font-size: var(--text-lg);
-      margin-bottom: var(--gutter);
+      font-size: var(--text-xl);
+      margin-bottom: var(--space-xxl);
 
       @media ${breakpoint.tablet} {
         margin-bottom: 0;

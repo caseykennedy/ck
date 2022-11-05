@@ -26,7 +26,7 @@ const Theme = css`
     --radius-full: 50%;
 
     // transitions
-    --transition: 0.175s ease;
+    --transition: 0.275s ease;
     --transition-all: all var(--transition);
 
     @media ${breakpoint.tablet} {

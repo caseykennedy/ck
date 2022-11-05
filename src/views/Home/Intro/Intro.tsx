@@ -24,8 +24,8 @@ const Intro = () => {
           visual design and have made my way through a broad range of industries
           throughout my career. Some of these include ad agencies, DNS
           companies, crypto swaps, registrars, casino&apos;s, print shops and
-          music events where deliverables ranged from posters and stationery to
-          websites, apps and chrome extensions.
+          music events where deliverables ranged from logos and posters to
+          websites and blockchain dApps.
         </h2>
       </div>
       <div className="meta">

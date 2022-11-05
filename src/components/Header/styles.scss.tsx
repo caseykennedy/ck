@@ -26,6 +26,14 @@ export const Header = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    a {
+      color: var(--color-text);
+
+      &:hover {
+        color: var(--color-text-muted);
+      }
+    }
   }
 
   .utils {
@@ -46,10 +54,16 @@ export const Header = styled.header`
       &:hover {
         color: var(--color-text-muted);
       }
-    }
 
-    .theme-toggle {
-      font-size: 1.5rem;
+      &.theme-toggle {
+        font-size: 1.5rem;
+        transform: rotate(180deg);
+        transition: 0.333s ease-in-out 0s;
+
+        &__active {
+          transform: rotate(0deg);
+        }
+      }
     }
   }
 `

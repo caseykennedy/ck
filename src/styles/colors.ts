@@ -30,7 +30,7 @@ const Colors = css`
     // background
     --color-bg: hsl(0, 0%, 100%);
     // typography
-    --color-text: hsl(270, 5%, 20%);
+    --color-text: hsl(270, 5%, 10%);
     --color-text-muted: hsl(270, 5%, 40%);
     --color-heading: hsl(0, 0%, 0%);
   }

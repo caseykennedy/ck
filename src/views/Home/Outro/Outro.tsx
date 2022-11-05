@@ -27,7 +27,7 @@ const Outro = () => {
       </div>
       <div className="meta">
         <div>
-          <h4>contact</h4>
+          {/* <h4>contact</h4> */}
           <a href="mailto:me@caseykennedy.me" target="_blank" rel="noreferrer">
             me@caseykennedy.me
           </a>

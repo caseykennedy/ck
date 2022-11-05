@@ -16,7 +16,7 @@ import * as S from './styles.scss'
 // ___________________________________________________________________
 
 const Header = () => {
-  const { toggle } = useDarkMode(true)
+  const { isDarkMode, toggle } = useDarkMode(true)
   // const [isNavOpen, setNavOpen] = useState(false)
   // const toggleMenu = () => setNavOpen(!isNavOpen)
 
@@ -25,12 +25,18 @@ const Header = () => {
       <S.Header>
         <div className="logo">
           <Link to="/" aria-label="Back to index page">
-            Casey Kennedy
+            casey kennedy
           </Link>
         </div>
 
         <div className="utils">
-          <button type="button" onClick={toggle} className="theme-toggle">
+          <button
+            type="button"
+            onClick={toggle}
+            className={`theme-toggle ${
+              isDarkMode ? 'theme-toggle__active' : ''
+            }`}
+          >
             ◒
           </button>
         </div>
