@@ -29,7 +29,7 @@ export const Hero = styled.div`
       padding: var(--gutter);
 
       position: sticky;
-      top: var(--header-height);
+      top: calc(var(--header-height) + var(--space-lg));
       max-inline-size: 53ch;
 
       /* &:first-child {
