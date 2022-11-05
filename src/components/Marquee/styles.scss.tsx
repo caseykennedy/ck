@@ -12,6 +12,7 @@ export const Marquee = styled.div`
 
     & > * {
       padding: 0 var(--gutter);
+      font-weight: 400;
     }
   }
 `

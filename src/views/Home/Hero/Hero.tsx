@@ -88,16 +88,15 @@ const Hero = () => {
           <TetraGeo
             flatShading={false}
             position={[0, 1, 0]}
-            radius={0.5}
-            detail={0.1}
-            speed={0.001}
+            radius={1}
+            speed={0.0035}
             wireframe={false}
           />
           <TetraGeo
             flatShading={false}
             position={[0, 1, 0]}
-            radius={3}
-            detail={0.75}
+            radius={4}
+            detail={0}
             speed={0.0009}
             wireframe={true}
           />

@@ -20,9 +20,9 @@ const Outro = () => {
     <S.Outro>
       <div className="billboard">
         <h2>
-          My promise is simple—no matter who I work with and what I create, I
-          always aim high, do it right and make it real. I believe in quality
-          design, attention to detail and tangible results.
+          My promise is simple—no matter who I work with and what I do, I always
+          aim high, do it right and make it real. I deliver quality design, pay
+          attention to detail and have gratitude for the people i work with.
         </h2>
       </div>
       <div className="meta">

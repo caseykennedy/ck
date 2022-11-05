@@ -61,8 +61,8 @@ const Typography = css`
     }
 
     // font weight
-    --body-font-weight: 600;
-    --heading-font-weight: 600;
+    --body-font-weight: 400;
+    --heading-font-weight: 400;
 
     // line-height
     --body-line-height: 1.15;
@@ -265,6 +265,7 @@ const Typography = css`
 
   a {
     color: var(--color-text-muted);
+    font-weight: var(--heading-font-weight);
     text-decoration: none;
     transition: var(--transition-all);
 

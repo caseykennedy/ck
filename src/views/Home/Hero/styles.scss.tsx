@@ -7,6 +7,7 @@ export const Hero = styled.div`
   display: flex;
   flex-flow: column nowrap;
   min-height: 75vh;
+  padding-top: var(--space-lg);
   position: relative;
   z-index: 1;
 
@@ -16,7 +17,7 @@ export const Hero = styled.div`
   }
 
   .billboard {
-    flex: 1;
+    flex: 1.75;
     display: flex;
     flex-flow: column nowrap;
     position: relative;
@@ -28,9 +29,8 @@ export const Hero = styled.div`
       padding: var(--gutter);
 
       position: sticky;
-      top: calc(var(--header-height) + calc(var(--gutter) + var(--space-xl)));
-
-      max-inline-size: 50ch;
+      top: var(--header-height);
+      max-inline-size: 53ch;
 
       /* &:first-child {
         border-bottom: var(--border);
@@ -42,7 +42,6 @@ export const Hero = styled.div`
     flex: 1;
     display: flex;
     gap: var(--gutter);
-    margin-top: var(--header-height);
     padding: var(--gutter);
     position: relative;
 
@@ -52,9 +51,6 @@ export const Hero = styled.div`
       flex-flow: column nowrap;
       align-items: flex-end;
       text-align: right;
-
-      position: sticky;
-      top: var(--header-height);
     }
 
     span {

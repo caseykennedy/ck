@@ -39,11 +39,11 @@ const Home = () => (
   <S.Home>
     <Hero />
     <Marquee>
-      <div>web + app dev</div>
-      <div>ui + ux</div>
-      <div>design systems</div>
-      <div>wireframing</div>
-      <div>prototyping</div>
+      <div>visual designer</div>
+      <div>taking on new projects</div>
+      <div>software developer</div>
+      <div>available for freelance</div>
+      <div>decentralize the internet</div>
     </Marquee>
     {/* <Projects /> */}
     <Section>

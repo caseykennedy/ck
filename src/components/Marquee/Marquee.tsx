@@ -14,7 +14,7 @@ type Props = {
 const MarqueeProps = {
   gradient: false,
   pauseOnHover: false,
-  speed: 20,
+  speed: 64,
 }
 
 const Marquee = ({ children }: Props) => (
