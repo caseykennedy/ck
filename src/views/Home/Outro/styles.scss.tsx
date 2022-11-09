@@ -49,7 +49,7 @@ export const Outro = styled(motion.div)`
     }
 
     a {
-      font-size: var(--text-xl);
+      font-size: var(--text-lg);
       margin-bottom: var(--space-xxl);
 
       @media ${breakpoint.tablet} {

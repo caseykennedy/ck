@@ -58,6 +58,7 @@ const Home = () => (
         placeholder="blurred"
         objectFit="cover"
         aspectRatio={1.75}
+        quality={60}
       />
     </Section>
 
@@ -72,6 +73,7 @@ const Home = () => (
         placeholder="blurred"
         objectFit="cover"
         aspectRatio={1.75}
+        quality={60}
       />
     </Section>
 

@@ -25,7 +25,10 @@ type DribbbleShape = {
 const DribbbleGrid = () => {
   const data: DribbbleShape = useStaticQuery(graphql`
     query DribbbleShots {
-      content: allFile(filter: { relativeDirectory: { eq: "dribbbles" } }) {
+      content: allFile(
+        filter: { relativeDirectory: { eq: "dribbbles" } }
+        sort: { fields: name }
+      ) {
         edges {
           node {
             name
