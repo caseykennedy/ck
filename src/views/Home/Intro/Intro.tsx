@@ -38,6 +38,8 @@ const Intro = () => {
           <br />
           design systems
           <br />
+          eCommerce
+          <br />
           visual design
           <br />
           wireframing / prototyping

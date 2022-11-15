@@ -68,7 +68,7 @@ const Home = () => (
 
     <Section>
       <StaticImage
-        src="../../../static/wireframe3.jpg"
+        src="../../../static/nevada.jpeg"
         alt="A dinosaur"
         placeholder="blurred"
         objectFit="cover"
