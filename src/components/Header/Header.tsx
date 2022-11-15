@@ -25,7 +25,7 @@ const Header = () => {
       <S.Header>
         <div className="logo">
           <Link to="/" aria-label="Back to index page">
-            casey kennedy
+            ck
           </Link>
         </div>
 
