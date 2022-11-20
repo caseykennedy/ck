@@ -17,6 +17,39 @@ import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
+const HeroCanvas = () => (
+  <S.Tetra>
+    <Canvas camera={{ position: [0, 2, 10], fov: 60 }}>
+      <ambientLight intensity={1} />
+      <spotLight
+        position={[20, 20, 25]}
+        penumbra={1}
+        angle={0.25}
+        color="black"
+        // castShadow
+        // shadow-mapSize={[512, 512]}
+      />
+      <directionalLight position={[0, 5, -4]} intensity={20} />
+      <directionalLight position={[0, -15, -0]} intensity={19} color="blue" />
+      <TetraGeo
+        flatShading={false}
+        position={[0, 1, 0]}
+        radius={1}
+        speed={0.0035}
+        wireframe={false}
+      />
+      <TetraGeo
+        flatShading={false}
+        position={[0, 1, 0]}
+        radius={5}
+        detail={0}
+        speed={0.00079}
+        wireframe={true}
+      />
+    </Canvas>
+  </S.Tetra>
+)
+
 const Hero = () => {
   const nevadaTime = useDate()
   return (
@@ -28,18 +61,19 @@ const Hero = () => {
               {/* Helping brands develop
               <br />
               cutting-edge digital experiences. */}
-              I collab with people, teams and visionaries—together we build
-              cutting-edge apps.
+              Design and development for people, teams and visionaries—
             </h1>
           </div>
         </div>
         <div className="meta">
-          <div>
-            based in nevada
-            <br />
-            <span>{nevadaTime}</span>
+          <div className="meta__col">
+            <div>
+              northern nevada
+              <br />
+              <span>{nevadaTime}</span>
+            </div>
           </div>
-          <div>
+          <div className="meta__col">
             <div>
               find me on
               <br />
@@ -47,22 +81,23 @@ const Hero = () => {
                 href="https://github.com/caseykennedy"
                 target="_blank"
                 rel="noreferrer"
+                className="link"
               >
                 github
-              </a>{' '}
-              /{' '}
+              </a>
               <a
                 href="https://dribbble.com/caseykennedy"
                 target="_blank"
                 rel="noreferrer"
+                className="link"
               >
                 dribbble
-              </a>{' '}
-              /{' '}
+              </a>
               <a
                 href="https://www.linkedin.com/in/casey-kennedy-0b123727/"
                 target="_blank"
                 rel="noreferrer"
+                className="link"
               >
                 linkedin
               </a>
@@ -70,38 +105,7 @@ const Hero = () => {
           </div>
         </div>
       </S.Hero>
-      <S.Tetra>
-        <Canvas camera={{ position: [0, 2, 10], fov: 60 }}>
-          {/* <ambientLight intensity={0.5} /> */}
-          <ambientLight intensity={1} />
-          <spotLight
-            position={[20, 20, 25]}
-            penumbra={1}
-            angle={0.25}
-            color="cyan"
-            // castShadow
-            // shadow-mapSize={[512, 512]}
-          />
-          <directionalLight position={[0, 5, -4]} intensity={4} />
-          <directionalLight position={[0, -15, -0]} intensity={2} color="red" />
-
-          <TetraGeo
-            flatShading={false}
-            position={[0, 1, 0]}
-            radius={1}
-            speed={0.0035}
-            wireframe={false}
-          />
-          <TetraGeo
-            flatShading={false}
-            position={[0, 1, 0]}
-            radius={4}
-            detail={0}
-            speed={0.0009}
-            wireframe={true}
-          />
-        </Canvas>
-      </S.Tetra>
+      <HeroCanvas />
     </>
   )
 }

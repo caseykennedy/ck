@@ -218,7 +218,7 @@ const Typography = css`
   h2,
   .text-h2 {
     font-size: var(--text-lg);
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--gutter);
   }
 
   h3,
@@ -274,12 +274,12 @@ const Typography = css`
     }
 
     &.link {
-      color: var(--color-accent);
+      color: var(--color-text-muted);
       text-decoration: none;
       transition: var(--transition-all);
 
       &:hover {
-        // color: var(--color-primary-light);
+        color: var(--color-text);
         text-decoration: underline;
       }
     }

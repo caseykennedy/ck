@@ -14,12 +14,14 @@ type ModalProps = {
 
 const modalStyles = {
   overlay: {
-    background: 'var(--color-white)',
+    // background: 'var(--color-bg-blur)',
+    backdropFilter: 'blur(7px)',
   },
   modal: {
-    background: 'var(--color-white)',
+    background: 'transparent',
     boxShadow: 'none',
     margin: '0',
+    paddingTop: '0',
     padding: `0`,
     height: '100%',
     maxWidth: '100%',
@@ -33,7 +35,7 @@ const Modal = ({ children, open, close }: ModalProps) => (
     open={open}
     onClose={close}
     styles={modalStyles}
-    focusTrapped={false}
+    focusTrapped={true}
     center={true}
     showCloseIcon={false}
   >

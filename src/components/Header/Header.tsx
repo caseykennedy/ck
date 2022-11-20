@@ -6,9 +6,8 @@ import { Link } from 'gatsby'
 import { useDarkMode } from 'usehooks-ts'
 
 // Components
-import Icon from '../Icons'
-// import MobileNav from './MobileNav'
-// import Modal from '../Modal'
+import Overlay from './Overlay'
+import Modal from '../Modal'
 
 // Styles
 import * as S from './styles.scss'
@@ -17,8 +16,8 @@ import * as S from './styles.scss'
 
 const Header = () => {
   const { isDarkMode, toggle } = useDarkMode(true)
-  // const [isNavOpen, setNavOpen] = useState(false)
-  // const toggleMenu = () => setNavOpen(!isNavOpen)
+  const [isNavOpen, setNavOpen] = useState(false)
+  const toggleMenu = () => setNavOpen(!isNavOpen)
 
   return (
     <>
@@ -30,6 +29,9 @@ const Header = () => {
         </div>
 
         <div className="utils">
+          <button type="button" onClick={toggleMenu} className="info-toggle">
+            {isNavOpen ? 'hide' : 'info'}
+          </button>
           <button
             type="button"
             onClick={toggle}
@@ -42,9 +44,9 @@ const Header = () => {
         </div>
       </S.Header>
 
-      {/* <Modal open={isNavOpen} close={toggleMenu}>
-        <MobileNav isOpen={isNavOpen} handleExitOnClick={toggleMenu} />
-      </Modal> */}
+      <Modal open={isNavOpen} close={toggleMenu}>
+        <Overlay isOpen={isNavOpen} handleExitOnClick={toggleMenu} />
+      </Modal>
     </>
   )
 }

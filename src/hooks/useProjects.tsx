@@ -1,41 +1,78 @@
 // useProjects hook
 
 import { graphql, useStaticQuery } from 'gatsby'
-import { IProjects } from '../types'
+import { ProjectHookShape } from '../types'
 
 // ___________________________________________________________________
 
 const useProjects = () => {
-  const data = useStaticQuery<IProjects>(graphql`
+  const data = useStaticQuery<ProjectHookShape>(graphql`
     query AllProjectsQuery {
-      projects: allProject {
+      projects: allProjectsYaml {
         edges {
           node {
+            id
+            client
+            tagline
+            industry
+            website
+            slug
+            year
+            images
             category
             color
             desc
-            id
-            images
-            industry
+            tasks
+            process
+            deliverables
             services
+            cover {
+              childImageSharp {
+                gatsbyImageData(
+                  backgroundColor: "transparent"
+                  formats: WEBP
+                  layout: FULL_WIDTH
+                  placeholder: DOMINANT_COLOR
+                  quality: 50
+                )
+              }
+            }
+          }
+          previous {
+            id
+            client
+            desc
             slug
-            title
-            title_detail
-            website
-            year
             cover {
               childImageSharp {
                 gatsbyImageData(
                   aspectRatio: 1.5
+                  backgroundColor: "transparent"
+                  formats: WEBP
                   layout: FULL_WIDTH
-                  formats: [AUTO, AVIF, WEBP]
                   placeholder: DOMINANT_COLOR
+                  quality: 50
                 )
               }
             }
           }
           next {
             id
+            client
+            desc
+            slug
+            cover {
+              childImageSharp {
+                gatsbyImageData(
+                  aspectRatio: 1.5
+                  backgroundColor: "transparent"
+                  formats: WEBP
+                  layout: FULL_WIDTH
+                  placeholder: DOMINANT_COLOR
+                  quality: 50
+                )
+              }
+            }
           }
         }
       }

@@ -11,7 +11,7 @@ import Marquee from '../../components/Marquee'
 // Sections
 import Hero from './Hero'
 import Intro from './Intro'
-import Aim from './Aim'
+// import Aim from './Aim'
 import Approach from './Approach'
 import Projects from './Projects'
 import Sites from './Sites'
@@ -38,20 +38,46 @@ import * as S from './styles.scss'
 const Home = () => (
   <S.Home>
     <Hero />
-    <Marquee>
+    <Section border={true}>
+      <Projects />
+    </Section>
+    <Section
+      border={true}
+      pt="var(--space-xxl)"
+      pr="0"
+      pb="var(--space-xxl)"
+      pl="0"
+    >
+      <Marquee>
+        <div>visual designer</div>
+        <div>taking on new projects</div>
+        <div>software developer</div>
+        <div>available for freelance</div>
+        <div>decentralize the internet</div>
+        <div>collaborate with me</div>
+      </Marquee>
+    </Section>
+    <Section border={true}>
+      <h2>miscellaneous</h2>
+      <DribbbleGrid />
+    </Section>
+    <Section border={true}>
+      <h2>sites</h2>
+      <Sites />
+    </Section>
+    {/* <Section bg="var(--color-bg-blur)" border={true}>
+      <Intro />
+    </Section> */}
+    {/* <Marquee>
       <div>visual designer</div>
       <div>taking on new projects</div>
       <div>software developer</div>
       <div>available for freelance</div>
       <div>decentralize the internet</div>
       <div>collaborate with me</div>
-    </Marquee>
-    {/* <Projects /> */}
-    <Section>
-      <DribbbleGrid />
-    </Section>
-    <Intro />
-    <Section>
+    </Marquee> */}
+    {/* <Intro /> */}
+    {/* <Section>
       <StaticImage
         src="../../../static/wireframe.jpg"
         alt="A dinosaur"
@@ -60,13 +86,13 @@ const Home = () => (
         aspectRatio={1.75}
         quality={60}
       />
-    </Section>
+    </Section> */}
 
     {/* <Aim /> */}
-    <Approach />
+    {/* <Approach /> */}
     {/* <Process /> */}
 
-    <Section>
+    {/* <Section>
       <StaticImage
         src="../../../static/nevada.jpeg"
         alt="A dinosaur"
@@ -75,10 +101,8 @@ const Home = () => (
         aspectRatio={1.75}
         quality={60}
       />
-    </Section>
-
-    {/* <Sites /> */}
-    <Outro />
+    </Section> */}
+    {/* <Outro /> */}
   </S.Home>
 )
 

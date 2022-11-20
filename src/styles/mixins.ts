@@ -53,3 +53,14 @@ export const breakpoint = {
   tablet: `(min-width: ${breakpoints[0]})`,
   desktop: `(min-width: ${breakpoints[1]})`,
 }
+
+export const fontSmooth = css`
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-feature-settings: 'pnum';
+  text-rendering: geometricPrecision;
+  font-feature-settings: 'pnum';
+  font-variant-numeric: proportional-nums;
+  font-variant-ligatures: discretionary-ligatures;
+`

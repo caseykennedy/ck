@@ -1,16 +1,9 @@
 // Projects:
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-
-// types
-import { ProjectShapeProject } from '../../../types'
-
-// Components
-// import Icon from '../../../components/Icons'
+import { motion } from 'framer-motion'
 
 // Hooks
 import useProjects from '../../../hooks/useProjects'
@@ -22,15 +15,25 @@ import * as S from './styles.scss'
 
 const imageVariants = {
   large: {
-    y: 0,
+    scale: 1.045,
     transition: {
-      y: { stiffness: 400, velocity: -400, duration: 0.25, ease: 'easeInOut' },
+      scale: {
+        stiffness: 400,
+        velocity: -400,
+        duration: 0.65,
+        ease: 'easeOut',
+      },
     },
   },
   small: {
-    y: -11,
+    scale: 1,
     transition: {
-      y: { stiffness: 400, velocity: -400, duration: 0.25, ease: 'easeInOut' },
+      transform: {
+        stiffness: 400,
+        velocity: -400,
+        duration: 0.55,
+        ease: 'easeOut',
+      },
     },
   },
 }
@@ -61,91 +64,62 @@ const listVariants = {
   },
 }
 
-const polyVariant = {
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      y: { stiffness: 1000, velocity: -1000 },
-    },
-  },
-  hidden: {
-    y: 25,
-    opacity: 0,
-    transition: {
-      y: { stiffness: 1000 },
-    },
-  },
-}
-
-const staggerItems = {
-  visible: {
-    transition: { staggerChildren: 0.175, delayChildren: 0.175 },
-  },
-}
-
 const Projects = () => {
   const projects = useProjects()
-  const controls = useAnimation()
-  const [ref, inView] = useInView({
-    threshold: 0.05,
-  })
-
-  useEffect(() => {
-    const isVisible = async () => {
-      if (inView) {
-        await controls.start('visible')
-      }
-    }
-    isVisible().catch(console.error)
-  }, [controls, inView])
+  console.log('projects', projects)
 
   return (
-    <S.Projects
-      animate={controls}
-      initial="hidden"
-      variants={staggerItems}
-      ref={ref}
-    >
-      <div className="project-grid">
-        {projects.map(({ node: item }) => (
+    <S.Projects>
+      {projects.map(({ node: item }) => (
+        <Link to={`/projects/${item.slug}`} key={item.id}>
           <motion.div
-            variants={polyVariant}
-            initial={['closed', 'large']}
-            whileHover={['open', 'small']}
-            animate={['closed', 'large']}
-            key={item.id}
+            initial="closed"
+            whileHover="open"
+            animate="closed"
             className="project"
           >
-            <Link to={`/projects/${item.slug}`}>
-              <motion.div variants={imageVariants}>
+            <div className="project__figure">
+              <motion.div
+                variants={imageVariants}
+                initial="small"
+                whileHover="large"
+                animate="small"
+              >
                 <GatsbyImage
                   image={item.cover.childImageSharp.gatsbyImageData}
                   objectFit="cover"
                   objectPosition="50% 50%"
                   alt="alt"
-                  className="project__figure"
                 />
               </motion.div>
-            </Link>
-            <div className="project__meta">
-              <div className="title">
-                {/* {item.year} */}
-                <span>
-                  <strong>{item.title}</strong>
-                </span>
-              </div>
-              <motion.ul variants={listVariants}>
-                {item.services.map((service, idx) => (
-                  <motion.li variants={itemVariants} key={idx}>
-                    {service}
-                  </motion.li>
-                ))}
-              </motion.ul>
             </div>
+
+            <motion.div className="project__details">
+              <div className="title">
+                <div>
+                  <div className="title__client">{item.client}</div>
+                  <div className="title__tagline">{item.tagline}</div>
+                </div>
+                <motion.ul variants={listVariants}>
+                  {item.services.map((service, idx) => (
+                    <motion.li variants={itemVariants} key={idx}>
+                      {service}
+                    </motion.li>
+                  ))}
+                </motion.ul>
+              </div>
+
+              <div className="excerpt">
+                {item.desc.slice(0, 1).map((para, idx) => (
+                  <div key={idx} className="excerpt__desc">
+                    {para}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </motion.div>
-        ))}
-      </div>
+        </Link>
+      ))}
     </S.Projects>
   )
 }

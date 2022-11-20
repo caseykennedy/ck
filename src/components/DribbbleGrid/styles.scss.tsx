@@ -5,7 +5,7 @@ export const DribbbleGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: auto;
-  gap: 3px;
+  gap: var(--space-xxxxs);
 
   width: 100%;
 

@@ -8,7 +8,6 @@ import { breakpoint } from '../../../styles/mixins'
 
 export const Sites = styled(motion.div)`
   display: flex;
-  padding: 0 var(--gutter);
   margin-bottom: var(--gutter);
 
   .project-grid {
@@ -21,7 +20,7 @@ export const Sites = styled(motion.div)`
   .project {
     flex: 1;
     border-bottom: var(--border);
-    padding: var(--space-xxl) 0 0;
+    padding: var(--space-xxl) 0 var(--gutter);
 
     &__figure {
       /* border-radius: var(--radius-sm); */
@@ -37,6 +36,8 @@ export const Sites = styled(motion.div)`
       /* padding-right: var(--space-xxl); */
 
       .title {
+        font-size: var(--text-md);
+
         span {
           /* color: var(--color-white); */
           /* margin-left: var(--gutter); */

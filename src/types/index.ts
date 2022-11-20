@@ -1,5 +1,12 @@
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 
+export interface GatsbyImage {
+  name: string
+  childImageSharp: {
+    gatsbyImageData: IGatsbyImageData
+  }
+}
+
 export interface ImageNode {
   node: {
     name: string
@@ -28,63 +35,79 @@ export type DribbbleShape = {
 // Project Shape
 // ___________________________________________________________________
 
-export type ProjectShapeProject = {
-  title_detail: string
-  title: string
-  color: string
-  category: string
-  desc: string
+export type ProjectShape = {
+  id: string
+  client: string
+  tagline: string
   industry: string
-  services: string[]
-  slug: string
   website: string
-  year: number
+  slug: string
+  year: string
+  images: string
+  cover: GatsbyImage
+  category: string
+  color: string
+  desc: string[]
+  tasks: string[]
+  process: string[]
+  deliverables: string[]
+  services: string[]
   parent: {
     modifiedTime: string
     birthTime: string
   }
-  cover: {
-    name: string
-    childImageSharp: {
-      gatsbyImageData: IGatsbyImageData
-    }
-  }
 }
 
-export type ProjectShape = {
+export type ProjectShapeShort = {
+  desc: string
+  id: string
+  slug: string
+  client: string
+  cover: GatsbyImage
+}
+
+export type ProjectDataShape = {
   data: {
-    project: ProjectShapeProject
+    project: ProjectShape
     images: {
       edges: ImageNode[]
     }
   }
+  pageContext: {
+    id: string
+    slug: string
+    previous: {
+      desc: string
+      id: string
+      slug: string
+      client: string
+      cover: GatsbyImage
+    }
+    next: {
+      desc: string
+      id: string
+      slug: string
+      client: string
+      cover: GatsbyImage
+    }
+  }
 }
 
-export interface IProjects {
+export type ProjectHookShape = {
   projects: {
     edges: {
-      node: {
-        category: string
-        color: string
-        desc: string
-        id: string
-        images: string
-        industry: string
-        services: string[]
-        slug: string
-        title: string
-        title_detail: string
-        website: string
-        year: number
-        cover: {
-          childImageSharp: {
-            gatsbyImageData: IGatsbyImageData
-          }
-        }
-      }
-      next: {
-        id: string
-      }
+      node: ProjectShape
+      previous: ProjectShapeShort
+      next: ProjectShapeShort
     }[]
+  }
+}
+
+export type PrevNextShape = {
+  pageContext: {
+    id: string
+    slug: string
+    previous: ProjectShapeShort
+    next: ProjectShapeShort
   }
 }

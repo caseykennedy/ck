@@ -1,87 +1,86 @@
 // Projects styles:
 
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
 import { breakpoint } from '../../../styles/mixins'
 
 // ___________________________________________________________________
 
-export const Projects = styled(motion.div)`
+export const Projects = styled.div`
   display: flex;
-  padding: 0 var(--gutter);
-  margin-bottom: var(--gutter);
+  flex-flow: column nowrap;
+  gap: var(--gutter);
 
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: auto;
-    gap: var(--gutter);
+  a {
+    color: var(--color-text-muted);
 
-    width: 100%;
-
-    @media ${breakpoint.tablet} {
-      grid-template-columns: repeat(2, 1fr);
+    &:hover {
+      color: var(--color-text-muted);
     }
   }
 
   .project {
-    margin-bottom: var(--space-xl);
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: hidden;
+
+    @media ${breakpoint.tablet} {
+      flex-flow: row-reverse nowrap;
+    }
+
+    & > * {
+      flex: 1;
+    }
 
     &__figure {
-      /* border-radius: var(--radius-sm); */
       overflow: hidden;
     }
 
-    &__meta {
+    &__details {
       display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
+      flex-flow: column nowrap;
       justify-content: space-between;
-      gap: var(--space-xxxl);
-      /* padding-right: var(--space-xxl); */
+
+      backdrop-filter: blur(7px);
+      background-color: var(--color-bg-blur);
+      border: var(--border);
+      padding: var(--gutter);
+      /* padding-bottom: var(--space-xxxl); */
 
       .title {
-        span {
-          /* color: var(--color-white); */
-          /* margin-left: var(--gutter); */
-          transition: color var(--transition);
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        font-size: var(--text-md);
+        margin-bottom: var(--space-xxl);
+
+        &__client {
+          color: var(--color-text);
+          margin-bottom: var(--space-xxxxs);
+        }
+
+        &__tagline {
+          color: var(--color-text-muted);
+        }
+      }
+
+      .excerpt {
+        &__desc {
+          max-inline-size: 44ch;
         }
       }
 
       ul {
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        /* gap: var(--space-xxs); */
+        display: none;
+
+        @media ${breakpoint.tablet} {
+          display: block;
+        }
 
         li {
-          display: flex;
-          place-items: center;
-          padding: var(--space-xxxs) var(--space-xxxs);
-
-          /* border: var(--border); */
-          border-radius: var(--radius-sm);
+          color: var(--color-text);
+          font-size: var(--text-base-size);
           white-space: nowrap;
-          transition: color var(--transition);
-
-          /* opacity: 0; */
-
-          &:hover {
-            color: var(--color-white);
-          }
         }
-      }
-    }
-
-    &:hover {
-      .title {
-        span {
-          color: var(--color-white);
-        }
-      }
-
-      ul li {
-        opacity: 1;
       }
     }
   }

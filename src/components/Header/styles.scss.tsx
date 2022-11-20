@@ -20,7 +20,7 @@ export const Header = styled.header`
   padding: var(--gutter);
   height: var(--header-height);
   width: 100%;
-  z-index: 9;
+  z-index: 9999;
 
   .logo {
     display: flex;
@@ -53,6 +53,13 @@ export const Header = styled.header`
 
       &:hover {
         color: var(--color-text-muted);
+      }
+
+      &.info-toggle {
+        &:hover {
+          color: var(--color-text);
+          text-decoration: underline;
+        }
       }
 
       &.theme-toggle {

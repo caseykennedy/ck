@@ -6,9 +6,6 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
-// types
-import { ProjectShapeProject } from '../../../types'
-
 // Components
 // import Icon from '../../../components/Icons'
 
@@ -80,6 +77,11 @@ const polyVariant = {
 
 const staggerItems = {
   visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.175, delayChildren: 0.175 },
+  },
+  hidden: {
+    opacity: 0,
     transition: { staggerChildren: 0.175, delayChildren: 0.175 },
   },
 }
@@ -88,7 +90,7 @@ const Sites = () => {
   const projects = useProjects()
   const controls = useAnimation()
   const [ref, inView] = useInView({
-    threshold: 0.05,
+    threshold: 0.25,
   })
 
   useEffect(() => {
@@ -121,7 +123,7 @@ const Sites = () => {
               <div className="title">
                 {/* {item.year} */}
                 <span>
-                  <strong>{item.title}</strong>
+                  <strong>{item.client}</strong>
                 </span>
               </div>
               <motion.ul variants={listVariants}>

@@ -1,43 +1,59 @@
-# - title: 'Cannavative'
-#   title_detail: 'Cannavative Cannabis Extracts'
-#   slug: 'cannavative'
-#   year: 2018
-#   desc: 'I needed a creative agency at the top of design thinking and leading edge in technical capabilities. core37 was a perfect match. They delivered the perfect end to end digital platform, on time and in full. I loved their creativity, their high quality standards and the strong partnership with my team.'
-#   industry: 'cannabis'
-#   category: 'design'
-#   color: 'green'
-#   images: 'cannavative'
-#   cover: './cannavative/09bcopy.png'
-#   services:
-#     - logo identity
-#     - packaging
-
-- title: 'Bottle Barn'
-  title_detail: 'Bottle Barn Wine & Spirits'
-  slug: 'bottle-barn'
-  year: 2018
-  desc: Bottle Barn is Sonoma County's largest discount wine and spirits shop. Their goal was to bring their shop online. We designed them a humble identity and a custom Shopify theme and delivered a fully functional, ent to end digital platform to sell wine and keep in touch with their shoppers.
-  industry: 'ecommerce'
-  category: 'design + development'
-  color: '#82726b'
-  images: 'bottle-barn'
-  cover: './bottle-barn/bb__packaging.jpg'
+- client: 'Bob Wallet'
+  tagline: 'A Handshake wallet in your browser.'
+  industry: 'decentralized domain registration'
+  website: ''
+  slug: 'bob-extension'
+  year: '2021'
+  images: 'bob-extension'
+  cover: './bob-extension/cover.png'
+  category: 'case study'
+  color: 'blue'
+  desc:
+    - 'Bob Extension runs a wallet in your web browser and enables DNS resolving through the Handshake DNS.'
+  tasks:
+    - 'Refactor the UI and theme.'
+    - 'Integrate multiple account creation and account admin using the hsd API (Handshake blockchain).'
+    - 'Integrate support for Ledger hardware wallet.'
+  process:
+    - 'In order to complete these tasks I had to dive deep into react, redux and client-side state as well as learn several new APIs which communicate with the handshake blockchain and USB devices. Tasks included writing async/await functions, data mutations and serialization, building views and layouts, and extending background services written in JS and NODE.'
+    - 'In addition to the main objectives, I was also able to refactor the apps front-end state using redux and design a dark theme to be implemented in a future release.'
+  deliverables:
+    - 'Figma Design system'
+    - 'App development and integrations'
   services:
-    - logo identity
-    - ui + ux
-    - dev
-  website: 'bottlebarn.com'
-# - title: 'Blackbird'
-#   title_detail: 'Blackbird Cannabis Logistics'
-#   slug: 'blackbird'
-#   year: 2019
-#   desc: Bottle Barn is Sonoma County's largest discount wine and spirits shop. Their goal was to bring their shop online. We designed them a humble identity and a custom Shopify theme and delivered a fully functional, ent to end digital platform to sell wine and keep in touch with their shoppers.
-#   industry: 'logistics'
-#   category: 'design + development'
-#   color: '#82726b'
-#   images: 'blackbird'
-#   cover: './blackbird/bb-v15.png'
-#   services:
-#     - prototyping
-#     - ui + ux
-#     - dev
+    - 'UI design'
+    - 'Full-stack development'
+    - 'API integration'
+    - 'Hardware integration'
+
+- client: 'dWeb Foundation'
+  tagline: 'Decentralize the internet.'
+  industry: 'crypto'
+  website: ''
+  slug: 'dweb'
+  year: '2020'
+  images: 'dweb'
+  cover: './dweb/cover.png'
+  category: 'case study'
+  color: 'purple'
+  desc:
+    - 'Bob Extension runs a wallet in your web browser and enables DNS resolving through the Handshake DNS.'
+    - 'It injects a Bob3 object into every website and allow dApps to interact with your wallet through a pop-up confirmation.'
+    - 'Bob Extension will allow you to manage your Handshake TLDs, and enable you to login to dApps using your Handshake TLDs.'
+  tasks:
+    - 'Build a lean new brand for the foudnation.'
+    - 'Design a modern website.'
+    - 'Integrate a headless CMS'
+  process:
+    - 'dWeb process'
+  deliverables:
+    - 'Brand standards'
+    - 'Logo identity system'
+    - 'Website prototypes'
+    - 'Website with CMS'
+  services:
+    - 'branding'
+    - 'logo identity'
+    - 'web design'
+    - 'web development'
+    - 'CMS integration'

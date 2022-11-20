@@ -54,23 +54,31 @@ module.exports = {
     },
     {
       resolve: 'gatsby-transformer-yaml',
-      options: {
-        typeName: ({ node }) => {
-          const name = node.sourceInstanceName
-          if (name === `projects`) {
-            return `Project`
-          }
-          return name
-        },
-      },
+      // options: {
+      //   typeName: ({ node }) => {
+      //     const name = node.sourceInstanceName
+      //     if (name === `projects`) {
+      //       return `Project`
+      //     }
+      //     return name
+      //   },
+      // },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: './content/projects',
+        path: `${__dirname}/content/projects`,
         name: 'projects',
       },
       __key: 'projects',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/images`,
+      },
+      __key: 'images',
     },
     {
       resolve: 'gatsby-source-filesystem',
@@ -87,15 +95,19 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-plugin-sharp`,
       options: {
-        name: 'images',
-        path: `${__dirname}/src/images`,
+        defaults: {
+          formats: [`auto`, `webp`],
+          backgroundColor: 'transparent',
+          placeholder: 'dominantColor',
+          quality: 50,
+          breakpoints: [750, 1080, 1366, 1920],
+        },
       },
     },
-    'gatsby-plugin-image',
-    'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-image',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
     'gatsby-plugin-netlify',

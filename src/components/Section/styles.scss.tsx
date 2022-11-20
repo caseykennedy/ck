@@ -6,8 +6,19 @@ import styled from 'styled-components'
 
 // ___________________________________________________________________
 
-export const Section = styled.section<{ bg?: string, border?: boolean, color?: string, maxWidth?: string, pt?: string, pr?: string, pb?: string, pl?: string, overflow?: string }>`
+export const Section = styled.section<{
+  bg?: string
+  border?: boolean
+  color?: string
+  maxWidth?: string
+  pt?: string
+  pr?: string
+  pb?: string
+  pl?: string
+  overflow?: string
+}>`
   background: ${(p) => p.bg || 'none'};
+  backdrop-filter: blur(7px);
   color: ${(p) => p.color || 'inherit'};
   padding-top: ${(p) => p.pt};
   padding-bottom: ${(p) => p.pb};
@@ -18,7 +29,7 @@ export const Section = styled.section<{ bg?: string, border?: boolean, color?: s
 
   .section__inner {
     box-sizing: content-box;
-    max-width: ${p => p.maxWidth || '100%'};
+    max-width: ${(p) => p.maxWidth || '100%'};
     margin: 0 auto;
     padding-right: ${(p) => p.pr};
     padding-left: ${(p) => p.pl};

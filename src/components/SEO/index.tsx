@@ -61,10 +61,10 @@ const SEO = ({
   const { buildTime } = site
 
   const seo = {
-    title: `${title}` || settings.siteTitle,
+    title: title || settings.siteTitle,
     description: desc || settings.siteDescription,
     image: banner || settings.bannerUrl,
-    url: `${settings.siteUrl}${pathname || ''}`,
+    url: `${settings.siteUrl}${pathname}` || '',
   }
 
   // schema.org in JSONLD format

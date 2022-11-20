@@ -14,6 +14,7 @@ export const Hero = styled.div`
   @media ${breakpoint.tablet} {
     flex-flow: row nowrap;
     justify-content: stretch;
+    min-height: 80vh;
   }
 
   .billboard {
@@ -30,7 +31,7 @@ export const Hero = styled.div`
 
       position: sticky;
       top: calc(var(--header-height) + var(--space-lg));
-      max-inline-size: 53ch;
+      max-inline-size: 50ch;
 
       /* &:first-child {
         border-bottom: var(--border);
@@ -45,12 +46,29 @@ export const Hero = styled.div`
     padding: var(--gutter);
     position: relative;
 
-    & > * {
+    a {
+      cursor: ne-resize;
+    }
+
+    &__col {
       flex: 1;
       display: flex;
       flex-flow: column nowrap;
       align-items: flex-end;
       text-align: right;
+
+      & > * {
+        flex: 1;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-end;
+        justify-content: flex-end;
+        text-align: right;
+
+        @media ${breakpoint.tablet} {
+          justify-content: flex-start;
+        }
+      }
     }
 
     span {

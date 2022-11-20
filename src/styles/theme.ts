@@ -15,10 +15,10 @@ const Theme = css`
     --header-height: 44px;
 
     // Icons
-    --icon-size: 1.25rem;
+    --icon-size: 0.875rem;
 
     // Radius
-    --radius: 1rem; // border radius base size
+    --radius: 0.75rem; // border radius base size
     --radius-xs: calc(var(--radius) / 3);
     --radius-sm: calc(var(--radius) / 2);
     --radius-md: calc(var(--radius) * 2);
@@ -45,9 +45,8 @@ const Theme = css`
     display: flex;
     align-items: center;
     justify-content: center;
-    // font-family: 'fontName';
-    height: var(--icon-xs);
-    width: var(--icon-xs);
+    height: var(--icon-size);
+    width: var(--icon-size);
   }
 `
 

@@ -4,6 +4,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 import Reset from './reset'
+import Buttons from './buttons'
 import Colors from './colors'
 import Spacing from './spacing'
 import Theme from './theme'
@@ -13,6 +14,7 @@ import Typography from './typography'
 
 const GlobalStyles = createGlobalStyle`
   ${Reset}
+  ${Buttons}
   ${Colors}
   ${Spacing}
   ${Typography}
@@ -40,8 +42,7 @@ const GlobalStyles = createGlobalStyle`
     display: none;
   }
 
-  /*
-  ::-webkit-scrollbar-track {
+  /* ::-webkit-scrollbar-track {
   }
 
   ::-webkit-scrollbar-thumb {
