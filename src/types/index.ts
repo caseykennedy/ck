@@ -52,6 +52,7 @@ export type ProjectShape = {
   process: string[]
   deliverables: string[]
   services: string[]
+  credits: string[]
   parent: {
     modifiedTime: string
     birthTime: string

@@ -36,6 +36,7 @@ async function createProjectPostPages(graphql, actions) {
             process
             deliverables
             services
+            credits
             cover {
               childImageSharp {
                 gatsbyImageData(

@@ -81,7 +81,7 @@ const Hero = () => {
                 href="https://github.com/caseykennedy"
                 target="_blank"
                 rel="noreferrer"
-                className="link"
+                className="link ne-resize"
               >
                 github
               </a>
@@ -89,7 +89,7 @@ const Hero = () => {
                 href="https://dribbble.com/caseykennedy"
                 target="_blank"
                 rel="noreferrer"
-                className="link"
+                className="link ne-resize"
               >
                 dribbble
               </a>
@@ -97,7 +97,7 @@ const Hero = () => {
                 href="https://www.linkedin.com/in/casey-kennedy-0b123727/"
                 target="_blank"
                 rel="noreferrer"
-                className="link"
+                className="link ne-resize"
               >
                 linkedin
               </a>

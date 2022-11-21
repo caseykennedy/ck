@@ -15,7 +15,7 @@ import * as S from './styles.scss'
 
 const imageVariants = {
   large: {
-    scale: 1.045,
+    scale: 1.0575,
     transition: {
       scale: {
         stiffness: 400,

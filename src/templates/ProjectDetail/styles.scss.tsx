@@ -9,6 +9,7 @@ import { breakpoint } from '../../styles/mixins'
 export const ProjectDetail = styled.div`
   display: flex;
   flex-flow: column nowrap;
+  padding-top: var(--space-lg);
   width: 100%;
 
   .project-title {
@@ -32,6 +33,7 @@ export const ProjectDetail = styled.div`
   .details {
     display: flex;
     flex-flow: column nowrap;
+    position: relative;
 
     @media ${breakpoint.tablet} {
       flex-flow: row nowrap;
@@ -41,15 +43,37 @@ export const ProjectDetail = styled.div`
       flex: 1;
     }
 
-    h2,
-    p {
-      margin-bottom: var(--space-xxxxl);
+    &__title {
+      position: relative;
+
+      h2 {
+        margin-bottom: var(--space-xxxxl);
+        position: sticky;
+        top: calc(var(--header-height) + var(--space-lg));
+      }
+    }
+
+    &__summary {
+      ol {
+        /* color: var(--color-text-muted); */
+        list-style: decimal;
+        /* list-style-type: '→ '; */
+        list-style-position: inside;
+        margin-bottom: var(--space-lg);
+
+        li {
+          text-decoration: underline;
+          margin-bottom: var(--space-xxs);
+        }
+      }
     }
 
     &__meta {
       display: flex;
       flex-flow: row nowrap;
       gap: var(--gutter);
+      margin-top: var(--space-xxxxl);
+      margin-bottom: var(--space-xxxxl);
 
       &__col {
         flex: 1;

@@ -26,6 +26,7 @@ const useProjects = () => {
             process
             deliverables
             services
+            credits
             cover {
               childImageSharp {
                 gatsbyImageData(

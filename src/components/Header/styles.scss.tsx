@@ -6,8 +6,10 @@ import breakpoint from '../../utils/breakpoint'
 // ___________________________________________________________________
 
 export const Header = styled.header`
+  /* backdrop-filter: blur(7px); */
   background: var(--color-bg);
-  box-shadow: 0px 15px 30px 10px var(--color-bg);
+  box-shadow: 0px 5px 20px 10px var(--color-bg);
+  /* border-bottom: var(--border); */
 
   display: flex;
   flex-flow: row nowrap;
@@ -56,6 +58,8 @@ export const Header = styled.header`
       }
 
       &.info-toggle {
+        cursor: help;
+
         &:hover {
           color: var(--color-text);
           text-decoration: underline;

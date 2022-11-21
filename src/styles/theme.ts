@@ -14,6 +14,9 @@ const Theme = css`
     // Header
     --header-height: 44px;
 
+    // Site
+    --site-max-width: 1440px;
+
     // Icons
     --icon-size: 0.875rem;
 

@@ -9,18 +9,25 @@ import * as S from './styles.scss'
 
 type Props = {
   children: React.ReactNode
+  direction?: 'left' | 'right'
+  speed?: number
 }
 
-const MarqueeProps = {
-  gradient: false,
-  pauseOnHover: false,
-  speed: 57,
+const Marquee = ({ children, direction = "left", speed = 40 }: Props) => {
+  const MarqueeProps = {
+    direction,
+    gradient: false,
+    pauseOnHover: true,
+    speed,
+  }
+  return (
+    <S.Marquee>
+      <FastMarquee {...MarqueeProps}>
+        {children}
+        <div />
+      </FastMarquee>
+    </S.Marquee>
+  )
 }
-
-const Marquee = ({ children }: Props) => (
-  <S.Marquee>
-    <FastMarquee {...MarqueeProps}>{children}<div/></FastMarquee>
-  </S.Marquee>
-)
 
 export default Marquee

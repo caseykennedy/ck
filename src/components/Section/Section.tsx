@@ -61,6 +61,7 @@ const defaultProps = {
   pb: 'var(--gutter)',
   pr: 'var(--gutter)',
   pl: 'var(--gutter)',
+  // maxWidth: 'var(--site-max-width)',
 }
 
 Section.defaultProps = defaultProps

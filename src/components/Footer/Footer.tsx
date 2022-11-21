@@ -11,6 +11,7 @@ import * as S from './styles.scss'
 // Components
 import Icon from '../Icons'
 import Section from '../Section'
+import Marquee from '../Marquee'
 
 // ___________________________________________________________________
 
@@ -39,10 +40,10 @@ const Footer = ({ location }: FooterProps) => {
       <div className="contact">
         <div className="contact__cta">
           <h2 className="text-h1">Let&apos;s talk about your project.</h2>
-          <a href={mailTo} className="btn btn--primary">
+          {/* <a href={mailTo} className="btn btn--primary">
             Email me
             <Icon name="arrow" className="icon" />
-          </a>
+          </a> */}
         </div>
         <div className="contact__details">
           {/* <div>
@@ -51,28 +52,84 @@ const Footer = ({ location }: FooterProps) => {
             <span>{nevadaTime}</span>
           </div> */}
           <div>
-            email
+            contact
             <br />
-            <a href={mailTo} target="_blank" rel="noreferrer" className="link">
+            <a
+              href={mailTo}
+              target="_blank"
+              rel="noreferrer"
+              className="link e-resize"
+            >
               me@caseykennedy.me
             </a>
           </div>
         </div>
       </div>
 
-      <div className="utils">
-        <button
-          type="button"
-          onClick={scrollTop}
-          className="control control__top"
-        >
+      <nav>
+        <button type="button" onClick={scrollTop} className="n-resize">
           top
         </button>
-        {!isIndex && (
-          <Link to="/" className="control control__index">
-            home
-          </Link>
-        )}
+
+        <div className="routes">
+          {!isIndex && (
+            <Link to="/" className="w-resize">
+              home
+            </Link>
+          )}
+
+          <a
+            href={mailTo}
+            target="_blank"
+            rel="noreferrer"
+            className="routes__email e-resize"
+          >
+            email me
+            {/* <Icon name="arrow" /> */}
+          </a>
+        </div>
+      </nav>
+
+      <div className="footer-marquee">
+        <Marquee direction="right" speed={50}>
+          <div>
+            If you are interested in working together, please{' '}
+            <a
+              href={mailTo}
+              target="_blank"
+              rel="noreferrer"
+              className="link e-resize"
+            >
+              email me ✌️
+            </a>
+            .
+          </div>
+          <div>
+            I am currently considering new work for 2023,{' '}
+            <a
+              href={mailTo}
+              target="_blank"
+              rel="noreferrer"
+              className="link e-resize"
+            >
+              reach out 🌞
+            </a>
+            .
+          </div>
+          <div>
+            If your project is aimed at crypto or decentralization, is
+            open-sourced, sustainable or educational,{' '}
+            <a
+              href={mailTo}
+              target="_blank"
+              rel="noreferrer"
+              className="link e-resize"
+            >
+              let&apos;s work together 🤝
+            </a>
+            .
+          </div>
+        </Marquee>
       </div>
 
       <div className="info">

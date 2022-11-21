@@ -47,7 +47,7 @@ const TetraGeo = (props: Props) => {
       <tetrahedronGeometry attach="geometry" args={[radius, detail]} />
       <meshStandardMaterial
         attach="material"
-        color="#a28620"
+        color="#665712"
         flatShading={flatShading}
         wireframe={wireframe}
       />

@@ -26,6 +26,13 @@ const Buttons = css`
     --btn-secondary-color: var(--color-primary);
   } */
 
+  button {
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
   .btn {
     ${fontSmooth}
 

@@ -21,17 +21,17 @@ export const Hero = styled.div`
     flex: 1.75;
     display: flex;
     flex-flow: column nowrap;
+    padding: var(--gutter);
     position: relative;
 
     & > * {
       display: flex;
       flex-flow: column nowrap;
       justify-content: space-between;
-      padding: var(--gutter);
 
       position: sticky;
-      top: calc(var(--header-height) + var(--space-lg));
-      max-inline-size: 50ch;
+      top: calc(var(--header-height) + calc(var(--gutter) + var(--space-lg)));
+      max-inline-size: 42ch;
 
       /* &:first-child {
         border-bottom: var(--border);
@@ -45,10 +45,6 @@ export const Hero = styled.div`
     gap: var(--gutter);
     padding: var(--gutter);
     position: relative;
-
-    a {
-      cursor: ne-resize;
-    }
 
     &__col {
       flex: 1;

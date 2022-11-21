@@ -250,11 +250,12 @@ const Typography = css`
   p {
     ${textCrop(1, 0.05, -0.05)}
 
+    color: var(--color-text-muted);
     font-size: var(--text-md);
     line-height: var(--body-line-height);
 
     &:not(:last-child) {
-      margin-bottom: var(--gutter);
+      margin-bottom: var(--space-md);
     }
 
     &.lead {
@@ -333,7 +334,9 @@ const Typography = css`
     }
   }
 
-  ul {
+  ul,
+  ol {
+    color: var(--color-text);
   }
 `
 

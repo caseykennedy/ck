@@ -89,9 +89,24 @@ const ProjectDetail = ({ data, pageContext }: ProjectDataShape) => {
 
       <Section border={true}>
         <div className="details">
-          <h2 className="text-h3">Project details</h2>
+          <div className="details__title">
+            <h2 className="text-h3">Project details</h2>
+          </div>
           <div className="details__summary">
-            <p className="lead">{page.desc}</p>
+            {page.desc.slice(0, 1).map((para, idx) => (
+              <p className="lead" key={idx}>
+                {para}
+              </p>
+            ))}
+            <h3>Objectives:</h3>
+            <ol>
+              {page.tasks.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ol>
+            {page.process.map((para, idx) => (
+              <p key={idx}>{para}</p>
+            ))}
             <div className="details__meta">
               <div className="details__meta__col">
                 <div>
@@ -102,17 +117,44 @@ const ProjectDetail = ({ data, pageContext }: ProjectDataShape) => {
                   Year
                   <span>{page.year}</span>
                 </div>
-              </div>
-              <div className="details__meta__col">
                 <div>
                   Industry
                   <span>{page.industry}</span>
                 </div>
+                {page.credits && (
+                  <div>
+                    Credits
+                    {page.credits.map((item, idx) => (
+                      <span key={idx}>{item}</span>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <div className="details__meta__col">
                 <div>
                   Services
                   {page.services.map((service, idx) => (
                     <span key={idx}>{service}</span>
                   ))}
+                </div>
+                <div>
+                  Deliverables
+                  {page.deliverables.map((item, idx) => (
+                    <span key={idx}>{item}</span>
+                  ))}
+                </div>
+                <div>
+                  Website
+                  <span>
+                    <a
+                      href={`http://${page.website}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="link ne-resize"
+                    >
+                      {page.website}
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -132,18 +174,22 @@ export default ProjectDetail
 export const query = graphql`
   query ($slug: String!) {
     project: projectsYaml(slug: { eq: $slug }) {
+      id
+      client
+      tagline
+      industry
+      website
+      slug
+      year
+      images
       category
       color
       desc
-      id
-      images
-      industry
+      tasks
+      process
+      deliverables
       services
-      slug
-      client
-      tagline
-      website
-      year
+      credits
     }
     images: allFile(
       filter: { relativeDirectory: { eq: $slug } }

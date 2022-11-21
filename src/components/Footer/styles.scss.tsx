@@ -11,7 +11,7 @@ export const Footer = styled.footer`
   display: flex;
   flex-flow: column nowrap;
   border-top: var(--border);
-
+  min-height: 33vh;
   position: relative;
   z-index: 1;
 
@@ -74,7 +74,7 @@ export const Footer = styled.footer`
     }
   }
 
-  .utils {
+  nav {
     display: flex;
     flex-flow: row-reverse nowrap;
     align-items: center;
@@ -86,7 +86,8 @@ export const Footer = styled.footer`
       /* padding-bottom: var(--space-xxl); */
     }
 
-    .control {
+    button,
+    a {
       color: var(--color-text-muted);
       text-decoration: none;
       transition: var(--transition-all);
@@ -96,18 +97,40 @@ export const Footer = styled.footer`
         color: var(--color-text);
         text-decoration: underline;
       }
+    }
 
-      &__index {
-        cursor: w-resize;
-      }
+    .routes {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      gap: var(--gutter);
 
-      &__top {
-        cursor: n-resize;
-        background: transparent;
-        border: none;
-        padding: 0;
+      &__email {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        color: var(--color-text);
+
+        span {
+          transform: translateX(calc(var(--space-xxxs) * -1));
+          svg {
+            transform: rotate(-90deg);
+            width: 9px;
+          }
+        }
+
+        :hover {
+          span {
+            transform: translateX(calc(var(--space-xxxs) * 0));
+          }
+        }
       }
     }
+  }
+
+  .footer-marquee {
+    border-top: var(--border);
+    width: 100%;
   }
 
   .info {

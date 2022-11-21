@@ -50,6 +50,19 @@ const GlobalStyles = createGlobalStyle`
 
   ::-webkit-scrollbar-thumb:hover {
   } */
+
+  .n-resize        { cursor: n-resize; }
+  .e-resize        { cursor: e-resize; }
+  .s-resize        { cursor: s-resize; }
+  .w-resize        { cursor: w-resize; }
+  .ns-resize       { cursor: ns-resize; }
+  .ew-resize       { cursor: ew-resize; }
+  .ne-resize       { cursor: ne-resize; }
+  .nw-resize       { cursor: nw-resize; }
+  .se-resize       { cursor: se-resize; }
+  .sw-resize       { cursor: sw-resize; }
+  .nesw-resize     { cursor: nesw-resize; }
+  .nwse-resize     { cursor: nwse-resize; }
 `
 
 export default GlobalStyles
