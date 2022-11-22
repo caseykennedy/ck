@@ -224,7 +224,7 @@ const Typography = css`
   h3,
   .text-h3 {
     font-size: var(--text-md);
-    margin-bottom: var(--space-xxs);
+    margin-bottom: var(--space-md);
   }
 
   h4,
