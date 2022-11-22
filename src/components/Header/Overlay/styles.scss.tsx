@@ -15,10 +15,10 @@ export const Overlay = styled(motion.div)`
   gap: var(--space-xl);
 
   margin: 0;
-  overflow-y: scroll;
+  overflow: auto;
   padding: var(--gutter);
   padding-top: calc(var(--space-lg) + var(--header-height));
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 
   background: var(--color-bg-blur);
