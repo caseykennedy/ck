@@ -23,10 +23,12 @@ export const ProjectDetail = styled.div`
     }
 
     p {
+      align-self: flex-end;
       /* display: block; */
       color: var(--color-text-muted);
       font-size: var(--text-base-size);
       text-align: right;
+      max-inline-size: 19ch;
     }
   }
 

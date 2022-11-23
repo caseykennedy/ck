@@ -19,6 +19,8 @@ import useInfo from '../../../hooks/useInfo'
 
 // components
 import Accordion from '../../Accordion'
+import img1 from '../../../images/sugar.jpg'
+import img2 from '../../../images/cream.jpg'
 
 // ___________________________________________________________________
 
@@ -64,14 +66,14 @@ const Overlay = ({ handleExitOnClick, isOpen }: OverlayProps) => {
   console.log('info: ', info)
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
-    // const distort = new HoverEffect({
-    //   parent: document.querySelector('.figuree'),
-    //   intensity: 0.3,
-    //   image1: img1,
-    //   image2: img2,
-    //   displacementImage:
-    //     'https://cdn.rawgit.com/robin-dela/hover-effect/b6c6fd26/images/stripe1mul.png?raw=true',
-    // })
+    const distort = new HoverEffect({
+      parent: document.querySelector('.figure'),
+      intensity: 0.3,
+      image1: img1,
+      image2: img2,
+      displacementImage:
+        'https://cdn.rawgit.com/robin-dela/hover-effect/b6c6fd26/images/stripe1mul.png?raw=true',
+    })
   }, [])
   return (
     <motion.div initial="hidden" animate={isOpen ? 'visible' : 'hidden'}>
@@ -84,7 +86,7 @@ const Overlay = ({ handleExitOnClick, isOpen }: OverlayProps) => {
             <motion.div variants={polyVariant}>
               <Accordion title={info.approach.headline}>
                 <div className="accordion-inner">
-                  <p>
+                  <p style={{ paddingBottom: 'var(--gutter)' }}>
                     {/* Design is much more than what you see. It is product whole vision
               from the start. My practice is based on a multifaceted approach
               where discovery is emphasized and functionality and aesthetic are
@@ -97,7 +99,9 @@ const Overlay = ({ handleExitOnClick, isOpen }: OverlayProps) => {
             <motion.div variants={polyVariant}>
               <Accordion title={info.process.headline}>
                 <div className="accordion-inner">
-                  <p>{info.process.message}</p>
+                  <p style={{ paddingBottom: 'var(--gutter)' }}>
+                    {info.process.message}
+                  </p>
                 </div>
               </Accordion>
             </motion.div>
@@ -149,7 +153,7 @@ const Overlay = ({ handleExitOnClick, isOpen }: OverlayProps) => {
 
         <div className="figure">
           {/* <div className="figure" /> */}
-          <motion.div variants={polyVariant}>
+          {/* <motion.div variants={polyVariant}>
             <StaticImage
               src="../../../../static/sugar.jpg"
               alt="casey kennedy headshot"
@@ -158,7 +162,7 @@ const Overlay = ({ handleExitOnClick, isOpen }: OverlayProps) => {
               // aspectRatio={1}
               quality={60}
             />
-          </motion.div>
+          </motion.div> */}
         </div>
         <S.Email variants={polyVariant}>
           <a

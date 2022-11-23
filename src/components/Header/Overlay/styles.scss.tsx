@@ -120,9 +120,9 @@ export const Email = styled(motion.div)`
   backdrop-filter: blur(7px);
   background: var(--color-bg);
   border: var(--border);
-  border-radius: var(--radius);
+  border-radius: var(--radius-lg);
   
-  padding: var(--gutter);
+  padding: var(--gutter) var(--space-lg);
   position: fixed;
   bottom: var(--gutter);
   /* width: calc(100% - var(--space-lg)); */
