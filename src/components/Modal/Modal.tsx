@@ -14,7 +14,7 @@ type ModalProps = {
 
 const modalStyles = {
   overlay: {
-    // background: 'var(--color-bg-blur)',
+    background: 'var(--color-bg-blur)',
     backdropFilter: 'blur(7px)',
   },
   modal: {

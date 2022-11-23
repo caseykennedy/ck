@@ -65,7 +65,7 @@ export const Carat = styled(motion.div)`
   }
 
   svg {
-    fill: var(--color-white);
+    fill: var(--color-text);
     width: inherit;
   }
 `

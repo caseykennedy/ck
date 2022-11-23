@@ -15,12 +15,10 @@ export const Overlay = styled(motion.div)`
   gap: var(--gutter);
 
   margin: 0;
-  overflow: auto;
+  /* overflow: auto; */
   padding: var(--gutter);
   padding-top: calc(var(--space-xl) + var(--header-height));
   width: 100vw;
-
-  background: var(--color-bg-blur);
 
   & > * {
     flex: 1;
@@ -28,7 +26,7 @@ export const Overlay = styled(motion.div)`
 
   @media ${breakpoint.tablet} {
     flex-flow: row nowrap;
-    min-height: 100vh;
+    /* min-height: 100vh; */
   }
 
   .bio {
