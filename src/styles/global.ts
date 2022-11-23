@@ -26,12 +26,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    overscroll-behavior-y: none;
+    /* overscroll-behavior-y: none; */
   }
 
-  .scroll-container {
+  /* .scroll-container {
     width: 100%;
-  }
+  } */
 
   .img {
     width: 100%;
@@ -39,7 +39,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-    display: none;
+    /* display: none; */
+    width: 0;
   }
 
   /* ::-webkit-scrollbar-track {

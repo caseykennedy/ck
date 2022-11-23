@@ -10,7 +10,7 @@ type ModalProps = {
   children: React.ReactNode
   open: boolean
   close: () => void
-} & typeof defaultProps
+}
 
 const modalStyles = {
   overlay: {
@@ -21,9 +21,9 @@ const modalStyles = {
     background: 'transparent',
     boxShadow: 'none',
     margin: '0',
-    paddingTop: '0',
+    // paddingTop: '0',
     padding: `0`,
-    height: '100%',
+    // height: '100%',
     maxWidth: '100%',
     width: '100%',
   },
@@ -31,12 +31,12 @@ const modalStyles = {
 
 const Modal = ({ children, open, close }: ModalProps) => (
   <ReactModal
-    animationDuration={100}
+    animationDuration={150}
     open={open}
     onClose={close}
     styles={modalStyles}
-    focusTrapped={true}
-    center={true}
+    focusTrapped={false}
+    // center={true}
     showCloseIcon={false}
   >
     {children}
@@ -44,9 +44,3 @@ const Modal = ({ children, open, close }: ModalProps) => (
 )
 
 export default Modal
-
-// ___________________________________________________________________
-
-const defaultProps = {}
-
-Modal.defaultProps = defaultProps

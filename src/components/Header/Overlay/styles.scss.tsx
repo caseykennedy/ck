@@ -14,11 +14,12 @@ export const Overlay = styled(motion.div)`
   flex-flow: column nowrap;
   gap: var(--gutter);
 
+  box-sizing: border-box;
   margin: 0;
   /* overflow: auto; */
   padding: var(--gutter);
   padding-top: calc(var(--space-xl) + var(--header-height));
-  width: 100vw;
+  width: 100%;
 
   & > * {
     flex: 1;
@@ -120,6 +121,7 @@ export const Email = styled(motion.div)`
   background: var(--color-bg);
   border: var(--border);
   border-radius: var(--radius);
+  
   padding: var(--gutter);
   position: fixed;
   bottom: var(--gutter);
