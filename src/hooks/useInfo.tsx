@@ -12,22 +12,22 @@ type InfoHookShape = {
         message: string
       }
       bio: string
-      figure: {
-        image1: {
-          childImageSharp: {
-            fluid: {
-              src: string
-            }
-          }
-        }
-        image2: {
-          childImageSharp: {
-            fluid: {
-              src: string
-            }
-          }
-        }
-      }
+      // figure: {
+      //   image1: {
+      //     childImageSharp: {
+      //       fluid: {
+      //         src: string
+      //       }
+      //     }
+      //   }
+      //   image2: {
+      //     childImageSharp: {
+      //       fluid: {
+      //         src: string
+      //       }
+      //     }
+      //   }
+      // }
       process: {
         headline: string
         message: string
@@ -59,22 +59,22 @@ const useInfo = () => {
             message
           }
           bio
-          figure {
-            image1 {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
-            }
-            image2 {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
-            }
-          }
+          # figure {
+          #   image1 {
+          #     childImageSharp {
+          #       fluid {
+          #         src
+          #       }
+          #     }
+          #   }
+          #   image2 {
+          #     childImageSharp {
+          #       fluid {
+          #         src
+          #       }
+          #     }
+          #   }
+          # }
           process {
             headline
             message
