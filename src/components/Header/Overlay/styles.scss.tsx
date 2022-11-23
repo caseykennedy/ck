@@ -18,7 +18,6 @@ export const Overlay = styled(motion.div)`
   overflow: auto;
   padding: var(--gutter);
   padding-top: calc(var(--space-xl) + var(--header-height));
-  min-height: 100vh;
   width: 100vw;
 
   background: var(--color-bg-blur);
@@ -29,6 +28,7 @@ export const Overlay = styled(motion.div)`
 
   @media ${breakpoint.tablet} {
     flex-flow: row nowrap;
+    min-height: 100vh;
   }
 
   .bio {
@@ -53,35 +53,6 @@ export const Overlay = styled(motion.div)`
       display: flex;
       flex-flow: row nowrap;
       gap: var(--gutter);
-    }
-
-    ul {
-      color: var(--color-text-muted);
-
-      li {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-      }
-    }
-
-    &__border {
-      ul {
-        width: 100%;
-
-        li {
-          border-bottom: var(--border);
-          padding: var(--space-xxs) 0;
-
-          &.current {
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-            justify-content: space-between;
-            color: var(--color-text);
-          }
-        }
-      }
     }
   }
 
@@ -120,6 +91,41 @@ export const Overlay = styled(motion.div)`
       color: var(--color-text-muted);
     }
   } */
+`
+
+export const List = styled.ul`
+  color: var(--color-text-muted);
+  width: 100%;
+
+  li {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    &.has-border {
+      border-bottom: var(--border);
+      padding: var(--space-xxs) 0;
+    }
+
+    &.is-current {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--color-text);
+    }
+  }
+`
+
+export const Email = styled(motion.div)`
+  backdrop-filter: blur(7px);
+  background: var(--color-bg);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: var(--gutter);
+  position: fixed;
+  bottom: var(--gutter);
+  /* width: calc(100% - var(--space-lg)); */
 `
 
 export default Overlay

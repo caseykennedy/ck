@@ -1,7 +1,3 @@
-import Section, { Row } from './Section'
-
-export {
-  Row
-}
+import Section from './Section'
 
 export default Section
