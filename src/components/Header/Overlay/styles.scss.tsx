@@ -12,12 +12,12 @@ import breakpoint from '../../../utils/breakpoint'
 export const Overlay = styled(motion.div)`
   display: flex;
   flex-flow: column nowrap;
-  gap: var(--space-xl);
+  gap: var(--gutter);
 
   margin: 0;
   overflow: auto;
   padding: var(--gutter);
-  padding-top: calc(var(--space-lg) + var(--header-height));
+  padding-top: calc(var(--space-xl) + var(--header-height));
   min-height: 100vh;
   width: 100vw;
 
@@ -43,7 +43,7 @@ export const Overlay = styled(motion.div)`
   }
 
   .list {
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-xxl);
 
     h4 {
       margin-bottom: var(--gutter);
@@ -62,10 +62,6 @@ export const Overlay = styled(motion.div)`
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-
-        &.current {
-          color: var(--color-text);
-        }
       }
     }
 
@@ -75,7 +71,15 @@ export const Overlay = styled(motion.div)`
 
         li {
           border-bottom: var(--border);
-          padding: var(--space-xs) 0;
+          padding: var(--space-xxs) 0;
+
+          &.current {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--color-text);
+          }
         }
       }
     }
@@ -99,6 +103,7 @@ export const Overlay = styled(motion.div)`
 
   .figure {
     flex: 1;
+    height: 444px;
   }
 
   /* .exit {

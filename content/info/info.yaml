@@ -1,0 +1,22 @@
+- info:
+    figure:
+      image1: './sugar.jpg'
+      image2: './disco-casey.png'
+    bio: 'Not your standard developer, I have a background in design and
+      have made my way through a broad range of industries including
+      DNS, domain registration, marketing, gaming and hospitality, and
+      entertainment—my current focus includes web3, frontend and visual
+      design.'
+    approach:
+      title: 'harmonic design<br />approach'
+      message: 'Design is much more than what you see, it is informed
+        harmonic balance. My practice is based on a design-first
+        approach—where research and discovery is just as important
+        as functionality and aesthetic.'
+    process:
+      title: 'out of the box,<br />never out of touch'
+      message: "Creative collaboration is the foundation of my pursuit.
+        It's also at the core of my relationship with my
+        clients. I collaborate with a range of folks that recognize
+        the value of design and I continue to work alongside them as
+        they grow."
