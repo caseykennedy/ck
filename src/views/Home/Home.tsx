@@ -75,10 +75,10 @@ const Home = () => (
       <h2>miscellaneous</h2>
       <DribbbleGrid />
     </Section>
-    <Section border={true}>
+    {/* <Section border={true}>
       <h2>sites</h2>
       <Sites />
-    </Section>
+    </Section> */}
     {/* <Section bg="var(--color-bg-blur)" border={true}>
       <Intro />
     </Section> */}

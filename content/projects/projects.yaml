@@ -45,7 +45,8 @@
     - 'Design and develop an informative website and blog.'
     - 'Integrate a headless CMS.'
   process:
-    - "The dWeb project was fairly straightforward—design a technological identity that speaks to blockchain and design and develop a lean website and blog to introduce the foundation. We built the website with react, gatsby and sanity CMS. Being that the site is more informational and static, the SSG capabilites of gatsby were a perfect fit. Sanity allows the foundation's team to easily update the site, post blogs and deploy updates in seconds."
+    - 'The dWeb project was fairly straightforward—design a technological identity that speaks to blockchain and design and develop a lean website and blog to introduce the foundation.'
+    - "The website was built with react, gatsby and sanity CMS. Being that the site is more informational and static, the SSG capabilites of gatsby were a perfect fit. Sanity allows the foundation's team to easily update the site, post blogs and deploy updates in seconds."
   services:
     - 'design'
     - 'web development'
