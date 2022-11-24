@@ -19,8 +19,7 @@ import useInfo from '../../../hooks/useInfo'
 
 // components
 import Accordion from '../../Accordion'
-import img1 from '../../../images/sugar.jpg'
-import img2 from '../../../images/cream.jpg'
+import distortion from '../../../images/4.png'
 
 // ___________________________________________________________________
 
@@ -69,12 +68,15 @@ const Overlay = ({ handleExitOnClick, isOpen }: OverlayProps) => {
     const distort = new HoverEffect({
       parent: document.querySelector('.figure'),
       intensity: 0.3,
-      image1: img1,
-      image2: img2,
-      displacementImage:
-        'https://cdn.rawgit.com/robin-dela/hover-effect/b6c6fd26/images/stripe1mul.png?raw=true',
+      image1: info.figure.image1.childImageSharp.fluid.src,
+      image2: info.figure.image4.childImageSharp.fluid.src,
+      displacementImage: distortion,
+      imagesRatio: 800 / 600,
     })
-  }, [])
+  }, [
+    info.figure.image1.childImageSharp.fluid.src,
+    info.figure.image4.childImageSharp.fluid.src,
+  ])
   return (
     <motion.div initial="hidden" animate={isOpen ? 'visible' : 'hidden'}>
       <S.Overlay variants={staggerItems}>
@@ -131,19 +133,19 @@ const Overlay = ({ handleExitOnClick, isOpen }: OverlayProps) => {
 
         <div>
           <motion.div variants={polyVariant} className="list">
-            <h4>employment</h4>
+            <h4>Employment</h4>
             <div>
               <Employment stats={info.stats.employment} />
             </div>
           </motion.div>
           <motion.div variants={polyVariant} className="list">
-            <h4>notable clients</h4>
+            <h4>Notable clients</h4>
             <div>
               <List list={info.stats.clients} />
             </div>
           </motion.div>
           <motion.div variants={polyVariant} className="list">
-            <h4>capabilities</h4>
+            <h4>Capabilities</h4>
             <div>
               <List list={info.stats.capabilities.development} />
               <List list={info.stats.capabilities.design} />
@@ -151,7 +153,10 @@ const Overlay = ({ handleExitOnClick, isOpen }: OverlayProps) => {
           </motion.div>
         </div>
 
-        <div className="figure">
+        <div>
+          <motion.div variants={polyVariant}>
+            <div className="figure" />
+          </motion.div>
           {/* <div className="figure" /> */}
           {/* <motion.div variants={polyVariant}>
             <StaticImage
