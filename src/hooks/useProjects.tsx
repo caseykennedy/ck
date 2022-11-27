@@ -36,6 +36,9 @@ const useProjects = () => {
                   placeholder: DOMINANT_COLOR
                   quality: 50
                 )
+                fluid(quality: 60) {
+                  src
+                }
               }
             }
           }

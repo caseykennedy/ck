@@ -1,13 +1,21 @@
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 
-export interface GatsbyImage {
+export type GatsbyImage = {
   name: string
   childImageSharp: {
     gatsbyImageData: IGatsbyImageData
   }
 }
 
-export interface ImageNode {
+export type ImageFluidSrc = {
+  childImageSharp: {
+    fluid: {
+      src: string
+    }
+  }
+}
+
+export type ImageNode = {
   node: {
     name: string
     childImageSharp: {
@@ -44,7 +52,12 @@ export type ProjectShape = {
   slug: string
   year: string
   images: string
-  cover: GatsbyImage
+  cover: {
+    childImageSharp: {
+      gatsbyImageData: IGatsbyImageData
+      fluid: { src: string }
+    }
+  }
   category: string
   color: string
   desc: string[]

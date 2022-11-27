@@ -1,15 +1,18 @@
 // Projects:
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { motion } from 'framer-motion'
+import HoverEffect from 'hover-effect'
 
 // Hooks
 import useProjects from '../../../hooks/useProjects'
 
 // Styles
 import * as S from './styles.scss'
+
+import distortion from '../../../images/4.png'
 
 // ___________________________________________________________________
 
@@ -64,6 +67,28 @@ const listVariants = {
   },
 }
 
+type FigureProps = {
+  image1: string
+  image2: string
+  selector: string
+}
+
+const Figure = ({ image1, image2, selector }: FigureProps) => {
+  useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
+    const distort = new HoverEffect({
+      parent: document.querySelector(`.${selector}`),
+      intensity: 0.3,
+      image1,
+      image2,
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      displacementImage: distortion,
+      imagesRatio: 800 / 600,
+    })
+  }, [image1, image2, selector])
+  return <div style={{ height: '100%' }} className={selector} />
+}
+
 const Projects = () => {
   const projects = useProjects()
   console.log('projects', projects)
@@ -91,6 +116,13 @@ const Projects = () => {
                   objectPosition="50% 50%"
                   alt="alt"
                 />
+                {/* <div className={item.slug}>
+                  <Figure
+                    image1={item.cover.childImageSharp.fluid.src}
+                    image2={item.cover.childImageSharp.fluid.src}
+                    selector={item.slug}
+                  />
+                </div> */}
               </motion.div>
             </div>
 
