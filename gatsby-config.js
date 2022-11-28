@@ -32,7 +32,10 @@ module.exports = {
     ogLanguage: config.ogLanguage,
     author: config.author,
     twitter: config.userTwitter,
-    facebook: config.ogSiteName,
+    mailTo: config.mailTo,
+    dribbbleUrl: config.dribbbleUrl,
+    githubUrl: config.githubUrl,
+    linkedinUrl: config.linkedinUrl,
   },
   plugins: [
     'gatsby-plugin-typescript',
@@ -54,6 +57,7 @@ module.exports = {
     },
     {
       resolve: 'gatsby-transformer-yaml',
+      // Create dynamic pages from YAML files
       // options: {
       //   typeName: ({ node }) => {
       //     const name = node.sourceInstanceName
@@ -123,7 +127,7 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /images/,
+          include: /static/,
         },
       },
     },

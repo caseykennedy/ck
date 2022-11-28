@@ -5,20 +5,16 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 
-// Theme + UI
+// Styles
 import * as S from './styles.scss'
 
+// Hooks
+import useSiteSettings from '../../hooks/useSiteSettings'
+
 // Components
-import Icon from '../Icons'
-import Section from '../Section'
 import Marquee from '../Marquee'
 
 // ___________________________________________________________________
-
-const mailTo = 'mailto:me@caseykennedy.me'
-const twitterURL = 'https://twitter.com/tetrashapes'
-const handshakeURL = 'https://handshake.org'
-const discordURL = 'https://discord.gg/8qZ7Y4'
 
 type FooterProps = {
   location: {
@@ -27,6 +23,7 @@ type FooterProps = {
 }
 
 const Footer = ({ location }: FooterProps) => {
+  const site = useSiteSettings()
   const isIndex = location.pathname === '/'
   const scrollTop = (e: React.MouseEvent<HTMLButtonElement>) => {
     window.scrollTo({
@@ -55,7 +52,7 @@ const Footer = ({ location }: FooterProps) => {
             contact
             <br />
             <a
-              href={mailTo}
+              href={site.mailTo}
               target="_blank"
               rel="noreferrer"
               className="link e-resize"
@@ -79,7 +76,7 @@ const Footer = ({ location }: FooterProps) => {
           )}
 
           <a
-            href={mailTo}
+            href={site.mailTo}
             target="_blank"
             rel="noreferrer"
             className="routes__email e-resize"
@@ -91,11 +88,11 @@ const Footer = ({ location }: FooterProps) => {
       </nav>
 
       <div className="footer-marquee">
-        <Marquee direction="left" speed={50}>
+        <Marquee direction="left" speed={60}>
           <div>
             If you are interested in working together, please{' '}
             <a
-              href={mailTo}
+              href={site.mailTo}
               target="_blank"
               rel="noreferrer"
               className="link e-resize"
@@ -107,7 +104,7 @@ const Footer = ({ location }: FooterProps) => {
           <div>
             I am currently considering new work for 2023,{' '}
             <a
-              href={mailTo}
+              href={site.mailTo}
               target="_blank"
               rel="noreferrer"
               className="link e-resize"
@@ -120,7 +117,7 @@ const Footer = ({ location }: FooterProps) => {
             If your project is aimed at crypto or decentralization, is
             open-sourced, sustainable or educational,{' '}
             <a
-              href={mailTo}
+              href={site.mailTo}
               target="_blank"
               rel="noreferrer"
               className="link e-resize"
@@ -136,7 +133,7 @@ const Footer = ({ location }: FooterProps) => {
         <div>©☻</div>
         <div className="info__links">
           <a
-            href="https://github.com/caseykennedy"
+            href={site.githubUrl}
             target="_blank"
             rel="noreferrer"
             className="link"
@@ -144,7 +141,7 @@ const Footer = ({ location }: FooterProps) => {
             github
           </a>
           <a
-            href="https://dribbble.com/caseykennedy"
+            href={site.dribbbleUrl}
             target="_blank"
             rel="noreferrer"
             className="link"
@@ -152,7 +149,7 @@ const Footer = ({ location }: FooterProps) => {
             dribbble
           </a>
           <a
-            href="https://www.linkedin.com/in/casey-kennedy-0b123727/"
+            href={site.linkedinUrl}
             target="_blank"
             rel="noreferrer"
             className="link"

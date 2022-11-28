@@ -11,7 +11,7 @@ type InfoHookShape = {
         headline: string
         message: string
       }
-      bio: string
+      bio: string[]
       figure: {
         image1: {
           childImageSharp: {

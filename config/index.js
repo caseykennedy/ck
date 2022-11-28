@@ -4,9 +4,9 @@ module.exports = {
   // Banner
   bannerUrl: 'http://CaseyKennedy.me/banner.png', // Banner image url
 
-  siteTitle: 'Casey Kennedy / designer + web developer', // Navigation and Site Title
+  siteTitle: 'Casey Kennedy / design + web development', // Navigation and Site Title
   siteTitleAlt:
-    'Casey Kennedy / visual designer + web developer + front-end guru', // Alternative Site title for SEO
+    'Casey Kennedy / visual designer, web developer, front-end guru', // Alternative Site title for SEO
   siteTitleShort: 'Casey Kennedy', // short_name for manifest
   siteHeadline: 'visual designer, web developer, front-end guru', // Headline for schema.org JSONLD
   siteUrl: 'http://CaseyKennedy.me', // Domain of your site. No trailing slash!
@@ -17,6 +17,11 @@ module.exports = {
   userTwitter: 'tetrashape', // Twitter Username
   ogSiteName: 'Casey Kennedy', // Facebook Site Name
   ogLanguage: 'en-US', // og:language
+
+  mailTo: 'mailto:me@caseykennedy.me',
+  dribbbleUrl: 'https://dribbble.com/caseykennedy',
+  githubUrl: 'https://github.com/caseykennedy',
+  linkedinUrl: 'https://www.linkedin.com/in/casey-kennedy-0b123727',
 
   googleTagID: 'UA-56063719-1',
 

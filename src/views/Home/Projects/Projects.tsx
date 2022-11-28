@@ -9,6 +9,9 @@ import HoverEffect from 'hover-effect'
 // Hooks
 import useProjects from '../../../hooks/useProjects'
 
+// Components
+import Icon from '../../../components/Icons'
+
 // Styles
 import * as S from './styles.scss'
 
@@ -58,6 +61,23 @@ const itemVariants = {
   },
 }
 
+const arrowVariants = {
+  open: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      x: { stiffness: 400, velocity: -400, duration: 0.25, ease: 'easeInOut' },
+    },
+  },
+  closed: {
+    x: -25,
+    opacity: 0,
+    transition: {
+      x: { stiffness: 400, velocity: -400, duration: 0.25, ease: 'easeInOut' },
+    },
+  },
+}
+
 const listVariants = {
   open: {
     transition: { staggerChildren: 0.05, delayChildren: 0.03 },
@@ -67,27 +87,27 @@ const listVariants = {
   },
 }
 
-type FigureProps = {
-  image1: string
-  image2: string
-  selector: string
-}
+// type FigureProps = {
+//   image1: string
+//   image2: string
+//   selector: string
+// }
 
-const Figure = ({ image1, image2, selector }: FigureProps) => {
-  useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
-    const distort = new HoverEffect({
-      parent: document.querySelector(`.${selector}`),
-      intensity: 0.3,
-      image1,
-      image2,
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      displacementImage: distortion,
-      imagesRatio: 800 / 600,
-    })
-  }, [image1, image2, selector])
-  return <div style={{ height: '100%' }} className={selector} />
-}
+// const Figure = ({ image1, image2, selector }: FigureProps) => {
+//   useEffect(() => {
+//     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
+//     const distort = new HoverEffect({
+//       parent: document.querySelector(`.${selector}`),
+//       intensity: 0.3,
+//       image1,
+//       image2,
+//       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+//       displacementImage: distortion,
+//       imagesRatio: 800 / 600,
+//     })
+//   }, [image1, image2, selector])
+//   return <div style={{ height: '100%' }} className={selector} />
+// }
 
 const Projects = () => {
   const projects = useProjects()
@@ -147,6 +167,9 @@ const Projects = () => {
                     {para}
                   </div>
                 ))}
+                <motion.div variants={arrowVariants} className="excerpt__icon">
+                  <Icon name="arrow" className="icon" />
+                </motion.div>
               </div>
             </motion.div>
           </motion.div>

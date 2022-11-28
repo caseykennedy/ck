@@ -16,6 +16,7 @@ import { polyVariant, staggerItems } from '../../../utils/variants'
 
 // hooks
 import useInfo from '../../../hooks/useInfo'
+import useSiteSettings from '../../../hooks/useSiteSettings'
 
 // components
 import Accordion from '../../Accordion'
@@ -62,7 +63,8 @@ type OverlayProps = {
 
 const Overlay = ({ handleExitOnClick, isOpen }: OverlayProps) => {
   const info = useInfo()
-  console.log('info: ', info)
+  const site = useSiteSettings()
+
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
     const distort = new HoverEffect({
@@ -81,18 +83,17 @@ const Overlay = ({ handleExitOnClick, isOpen }: OverlayProps) => {
     <motion.div initial="hidden" animate={isOpen ? 'visible' : 'hidden'}>
       <S.Overlay variants={staggerItems}>
         <div className="bio">
-          <div>
-            <motion.p variants={polyVariant} className="lead">
-              {info.bio}
+          {info.bio.map((para, idx) => (
+            <motion.p variants={polyVariant} key={idx} className="lead">
+              {para}
             </motion.p>
+          ))}
+
+          <div className="bio__detail">
             <motion.div variants={polyVariant}>
               <Accordion title={info.approach.headline}>
                 <div className="accordion-inner">
                   <p style={{ paddingBottom: 'var(--gutter)' }}>
-                    {/* Design is much more than what you see. It is product whole vision
-              from the start. My practice is based on a multifaceted approach
-              where discovery is emphasized and functionality and aesthetic are
-              in balance. */}
                     {info.approach.message}
                   </p>
                 </div>
@@ -108,27 +109,6 @@ const Overlay = ({ handleExitOnClick, isOpen }: OverlayProps) => {
               </Accordion>
             </motion.div>
           </div>
-          {/* <motion.div variants={polyVariant} className="list">
-          <h4>capabilities</h4>
-          <div>
-            <ul>
-              <li>web development</li>
-              <li>web3 / dapp</li>
-              <li>eCommerce</li>
-              <li>CMS integration</li>
-              <li>API integration</li>
-            </ul>
-
-            <ul>
-              <li>design systems</li>
-              <li>information architecture</li>
-              <li>ui+ux</li>
-              <li>product design</li>
-              <li>wireframing / prototyping</li>
-              <li>user journey mapping</li>
-            </ul>
-          </div>
-        </motion.div> */}
         </div>
 
         <div>
@@ -157,21 +137,10 @@ const Overlay = ({ handleExitOnClick, isOpen }: OverlayProps) => {
           <motion.div variants={polyVariant}>
             <div className="figure" />
           </motion.div>
-          {/* <div className="figure" /> */}
-          {/* <motion.div variants={polyVariant}>
-            <StaticImage
-              src="../../../../static/sugar.jpg"
-              alt="casey kennedy headshot"
-              placeholder="blurred"
-              objectFit="cover"
-              // aspectRatio={1}
-              quality={60}
-            />
-          </motion.div> */}
         </div>
         <S.Email variants={polyVariant}>
           <a
-            href="#/"
+            href={site.mailTo}
             target="_blank"
             rel="noreferrer"
             className="link e-resize text-xl"

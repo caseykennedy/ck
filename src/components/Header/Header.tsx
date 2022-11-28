@@ -23,7 +23,11 @@ const Header = () => {
     <>
       <S.Header>
         <div className="logo">
-          <Link to="/" aria-label="Back to index page">
+          <Link
+            to="/"
+            onClick={() => setNavOpen(false)}
+            aria-label="Back to index page"
+          >
             ck
           </Link>
         </div>

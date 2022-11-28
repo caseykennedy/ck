@@ -64,8 +64,19 @@ export const Projects = styled.div`
       }
 
       .excerpt {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        justify-content: space-between;
+
         &__desc {
           max-inline-size: 44ch;
+        }
+
+        &__icon {
+          SVG {
+            transform: rotate(-90deg);
+          }
         }
       }
 

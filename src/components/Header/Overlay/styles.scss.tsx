@@ -34,10 +34,10 @@ export const Overlay = styled(motion.div)`
     flex: 2;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 
-    .lead {
-      margin-bottom: var(--space-xxl);
+    &__detail {
+      margin-top: var(--space-xxl);
     }
   }
 
