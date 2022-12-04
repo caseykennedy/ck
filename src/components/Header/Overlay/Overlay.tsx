@@ -3,8 +3,6 @@
 // ___________________________________________________________________
 
 import React, { useEffect } from 'react'
-import { Link } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
 import { motion } from 'framer-motion'
 import HoverEffect from 'hover-effect'
 

@@ -1,30 +1,39 @@
 // Projects styles:
 
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
-import { breakpoint } from '../../../styles/mixins'
+// import { breakpoint } from '../../../styles/mixins'
 
 // ___________________________________________________________________
 
-export const Sites = styled(motion.div)`
+export const Sites = styled.div`
   display: flex;
   margin-bottom: var(--gutter);
+  overflow: hidden;
 
-  .project-grid {
+  .site-list {
     display: flex;
     flex-flow: column nowrap;
-
+    /* position: relative; */
     width: 100%;
-  }
 
-  .project {
-    flex: 1;
-    border-bottom: var(--border);
-    padding: var(--space-xxl) 0 var(--gutter);
+    a {
+      display: flex;
 
-    &__figure {
-      /* border-radius: var(--radius-sm); */
-      overflow: hidden;
+      /* &:not(:last-child) {
+        border-bottom: var(--border);
+      } */
+    }
+
+    &__row {
+      flex: 1;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+
+      & > * {
+        flex: 1;
+      }
     }
 
     &__meta {
@@ -32,53 +41,34 @@ export const Sites = styled(motion.div)`
       flex-flow: row nowrap;
       align-items: center;
       justify-content: space-between;
-      gap: var(--space-xxxl);
-      /* padding-right: var(--space-xxl); */
 
-      .title {
+      position: relative;
+      z-index: 1;
+      padding: var(--space-sm) 0 var(--space-sm);
+
+      .name {
         font-size: var(--text-md);
 
         span {
-          /* color: var(--color-white); */
-          /* margin-left: var(--gutter); */
           transition: color var(--transition);
-        }
-      }
-
-      ul {
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        /* gap: var(--space-xxs); */
-
-        li {
-          display: flex;
-          place-items: center;
-          padding: var(--space-xxxs) var(--space-xxxs);
-
-          /* border: var(--border); */
-          border-radius: var(--radius-sm);
-          white-space: nowrap;
-          transition: color var(--transition);
-
-          /* opacity: 0; */
-
-          &:hover {
-            color: var(--color-white);
-          }
         }
       }
     }
 
-    &:hover {
-      .title {
-        span {
-          color: var(--color-white);
-        }
-      }
+    &__figure {
+      display: flex;
 
-      ul li {
-        opacity: 1;
+      position: absolute;
+      top: var(--gutter);
+      bottom: var(--gutter);
+      right: var(--gutter);
+      z-index: 0;
+
+      width: calc(50% - calc(var(--gutter) * 2));
+
+      .gatsby-image-wrapper {
+        width: 100%;
+        height: 100%;
       }
     }
   }

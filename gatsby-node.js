@@ -22,21 +22,7 @@ async function createProjectPostPages(graphql, actions) {
         edges {
           node {
             id
-            client
-            tagline
-            industry
-            website
             slug
-            year
-            images
-            category
-            color
-            desc
-            tasks
-            process
-            deliverables
-            services
-            credits
             cover {
               childImageSharp {
                 gatsbyImageData(

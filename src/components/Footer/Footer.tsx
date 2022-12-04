@@ -34,15 +34,15 @@ const Footer = ({ location }: FooterProps) => {
   }
   return (
     <S.Footer>
-      <div className="contact">
-        <div className="contact__cta">
+      <div className="footer__contact">
+        <div className="footer__contact__cta">
           <h2 className="text-h1">Let&apos;s talk about your project.</h2>
           {/* <a href={mailTo} className="btn btn--primary">
             Email me
             <Icon name="arrow" className="icon" />
           </a> */}
         </div>
-        <div className="contact__details">
+        <div className="footer__contact__details">
           {/* <div>
             west coast based
             <br />
@@ -87,7 +87,7 @@ const Footer = ({ location }: FooterProps) => {
         </div>
       </nav>
 
-      <div className="footer-marquee">
+      <div className="footer__marquee">
         <Marquee direction="left" speed={60}>
           <div>
             If you are interested in working together, please{' '}
@@ -129,9 +129,9 @@ const Footer = ({ location }: FooterProps) => {
         </Marquee>
       </div>
 
-      <div className="info">
+      <div className="footer__info">
         <div>©☻</div>
-        <div className="info__links">
+        <div className="footer__info__links">
           <a
             href={site.githubUrl}
             target="_blank"

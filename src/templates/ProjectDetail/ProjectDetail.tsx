@@ -71,9 +71,10 @@ const PrevNext = ({ pageContext }: PrevNextShape) => {
 const ProjectDetail = ({ data, pageContext }: ProjectDataShape) => {
   const page = data.project
   const images = data.images.edges
-  console.log('images', images)
 
-  console.log('pageContext', pageContext)
+  console.log('page:', page)
+  console.log('images:', images)
+
   return (
     <S.ProjectDetail>
       <Section>
@@ -121,14 +122,27 @@ const ProjectDetail = ({ data, pageContext }: ProjectDataShape) => {
                   Industry
                   <span>{page.industry}</span>
                 </div>
-                {page.credits && (
+                <div>
+                  Website
+                  <span>
+                    <a
+                      href={`http://${page.website}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="link ne-resize"
+                    >
+                      {page.website}
+                    </a>
+                  </span>
+                </div>
+                {page.credits ? (
                   <div>
                     Credits
                     {page.credits.map((item, idx) => (
                       <span key={idx}>{item}</span>
                     ))}
                   </div>
-                )}
+                ) : null}
               </div>
               <div className="details__meta__col">
                 <div>
@@ -143,19 +157,21 @@ const ProjectDetail = ({ data, pageContext }: ProjectDataShape) => {
                     <span key={idx}>{item}</span>
                   ))}
                 </div>
-                <div>
-                  Website
-                  <span>
-                    <a
-                      href={`http://${page.website}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="link ne-resize"
-                    >
-                      {page.website}
-                    </a>
-                  </span>
-                </div>
+                {page.repository ? (
+                  <div>
+                    Repository
+                    <span>
+                      <a
+                        href={page.repository}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="link ne-resize"
+                      >
+                        GitHub
+                      </a>
+                    </span>
+                  </div>
+                ) : null}
               </div>
             </div>
           </div>
@@ -179,6 +195,7 @@ export const query = graphql`
       tagline
       industry
       website
+      repository
       slug
       year
       images

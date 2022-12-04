@@ -1,13 +1,12 @@
 - info:
     figure:
       image1: './sugar.jpg'
-      image2: './cream.jpg'
       image3: './speed.jpg'
       image4: './me.jpg'
     bio:
-      - 'I combine a design-first process with state-of-the-art tech to create seamless digital experiences.'
-      - 'Based in the high desert on the west coast, I have made my way through a range of industries including DNS, domain registration, marketing, gaming and hospitality, and entertainment—combined with over 15 years of experience, my background has taught me to work in fast-paced environments and to collaborate with interdisciplinary teams.'
-      - 'My promise is simple—no matter who I work with and what I do, I always aim high, do it right and make it real. I deliver quality design and development, pay attention to detail and have gratitude for the people i work with.'
+      - 'I combine a design-first process with cutting-edge tech to create seamless digital experiences.'
+      - 'Based in the high desert on the west coast, I have made my way through a range of industries including DNS, domain registration, marketing, gaming and hospitality, and entertainment. Combined with over 15 years of experience, my background has taught me to work in fast-paced environments and to collaborate with interdisciplinary teams.'
+      - 'My promise is simple—no matter who I work with and what I do, I always aim high, do it right and make it real. I deliver quality design and development, pay attention to detail and have gratitude for the people I work with.'
       # - "Not your standard developer, I have a background in design and
       # have made my way through a broad range of industries including
       # DNS, domain registration, marketing, gaming and hospitality, and

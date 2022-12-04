@@ -38,10 +38,9 @@ const Home = () => (
           >
             email me ✌️
           </a>
-          .
         </div>
         <div>
-          I am currently considering new work for 2023,{' '}
+          I am considering new work for 2023,{' '}
           <a
             href={mailTo}
             target="_blank"
@@ -50,7 +49,6 @@ const Home = () => (
           >
             reach out 🌞
           </a>
-          .
         </div>
         <div>
           If your project is aimed at crypto or decentralization, is
@@ -63,7 +61,6 @@ const Home = () => (
           >
             let&apos;s work together 🤝
           </a>
-          .
         </div>
       </Marquee>
     </Section>
@@ -72,6 +69,11 @@ const Home = () => (
       <h2>misc.</h2>
       <DribbbleGrid />
     </Section>
+
+    {/* <Section border={true}>
+      <h2>sites i&apos;ve built</h2>
+      <Sites />
+    </Section> */}
   </S.Home>
 )
 

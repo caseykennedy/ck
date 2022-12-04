@@ -16,6 +16,7 @@ const useProjects = () => {
             tagline
             industry
             website
+            repository
             slug
             year
             images

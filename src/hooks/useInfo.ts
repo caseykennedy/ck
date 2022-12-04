@@ -20,13 +20,6 @@ type InfoHookShape = {
             }
           }
         }
-        image2: {
-          childImageSharp: {
-            fluid: {
-              src: string
-            }
-          }
-        }
         image3: {
           childImageSharp: {
             fluid: {
@@ -75,13 +68,6 @@ const useInfo = () => {
           bio
           figure {
             image1 {
-              childImageSharp {
-                fluid {
-                  src
-                }
-              }
-            }
-            image2 {
               childImageSharp {
                 fluid {
                   src

@@ -15,7 +15,7 @@ export const Footer = styled.footer`
   position: relative;
   z-index: 1;
 
-  .contact {
+  .footer__contact {
     flex: 1;
     display: flex;
     flex-flow: column nowrap;
@@ -128,12 +128,12 @@ export const Footer = styled.footer`
     }
   }
 
-  .footer-marquee {
+  .footer__marquee {
     border-top: var(--border);
     width: 100%;
   }
 
-  .info {
+  .footer__info {
     display: flex;
     align-items: flex-end;
     border-top: var(--border);

@@ -49,6 +49,7 @@ export type ProjectShape = {
   tagline: string
   industry: string
   website: string
+  repository: string
   slug: string
   year: string
   images: string
