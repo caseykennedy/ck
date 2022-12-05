@@ -70,10 +70,10 @@ const Home = () => (
       <DribbbleGrid />
     </Section>
 
-    <Section border={true}>
+    {/* <Section border={true}>
       <h2>sites i&apos;ve built</h2>
       <Sites />
-    </Section>
+    </Section> */}
   </S.Home>
 )
 

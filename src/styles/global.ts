@@ -79,7 +79,7 @@ const GlobalStyles = createGlobalStyle`
     pointer-events: none;
     animation: grain 1s steps(6) infinite;
     background-image: url(//res.cloudinary.com/crunchdao/image/upload/v1658148613/250-100-12_syxynz.png);
-    opacity: 0.35;
+    opacity: 0.5;
   }
 
   @keyframes grain {
