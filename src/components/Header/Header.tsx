@@ -1,7 +1,7 @@
 // Header
 // ___________________________________________________________________
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'gatsby'
 import { useDarkMode } from 'usehooks-ts'
 
@@ -18,6 +18,11 @@ const Header = () => {
   const { isDarkMode, toggle } = useDarkMode(true)
   const [isNavOpen, setNavOpen] = useState(false)
   const toggleMenu = () => setNavOpen(!isNavOpen)
+
+  useEffect(() => {
+    const dataTheme = isDarkMode ? 'darkMode' : 'lightMode'
+    document.documentElement.setAttribute('data-theme', dataTheme)
+  }, [isDarkMode])
 
   return (
     <>

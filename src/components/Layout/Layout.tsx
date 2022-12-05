@@ -3,11 +3,9 @@
 // Layout:
 // ___________________________________________________________________
 
-import React, { useEffect } from 'react'
-import { useDarkMode } from 'usehooks-ts'
+import React from 'react'
 
 // Components
-import Cursor from '../Cursor'
 import Header from '../Header'
 import Footer from '../Footer'
 
@@ -25,23 +23,14 @@ export type LayoutProps = {
 }
 
 const Layout = ({ children, location }: LayoutProps) => {
-  const { isDarkMode } = useDarkMode()
-  useEffect(() => {
-    const dataTheme = isDarkMode ? 'darkMode' : 'lightMode'
-    document.documentElement.setAttribute('data-theme', dataTheme)
-  }, [isDarkMode])
-
   console.log(
     `%c namelayer | decentralize the internet | built by tetra/ `,
     `background: #78FFF2; color: #000000`
   )
   return (
-    <S.Wrapper>
-      {/* <Cursor /> */}
+    <S.Wrapper className="noise">
       <Header />
-      <S.Content>
-        {children}
-      </S.Content>
+      <S.Content>{children}</S.Content>
       <Footer location={location} />
     </S.Wrapper>
   )

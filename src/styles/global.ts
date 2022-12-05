@@ -64,6 +64,49 @@ const GlobalStyles = createGlobalStyle`
   .sw-resize       { cursor: sw-resize; }
   .nesw-resize     { cursor: nesw-resize; }
   .nwse-resize     { cursor: nwse-resize; }
+
+  .noise:before {
+    content: "";
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    width: auto;
+    height: auto;
+    position: fixed;
+    z-index: 10;
+    background-position: 50%;
+    pointer-events: none;
+    animation: grain 1s steps(6) infinite;
+    background-image: url(//res.cloudinary.com/crunchdao/image/upload/v1658148613/250-100-12_syxynz.png);
+    opacity: 0.35;
+  }
+
+  @keyframes grain {
+    0%, to {
+      transform: translate(0)
+    }
+
+    10% {
+      transform: translate(-5%, -10%)
+    }
+
+    30% {
+      transform: translate(3%, -15%)
+    }
+
+    50% {
+      transform: translate(12%, 9%)
+    }
+
+    70% {
+      transform: translate(9%, 4%)
+    }
+
+    90% {
+      transform: translate(-1%, 7%)
+    }
+  }
 `
 
 export default GlobalStyles
