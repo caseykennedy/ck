@@ -10,7 +10,7 @@ import Marquee from '../../components/Marquee'
 // Sections
 import Hero from './Hero'
 import Projects from './Projects'
-// import Sites from './Sites'
+import Sites from './Sites'
 
 // Styles
 import * as S from './styles.scss'
@@ -70,10 +70,10 @@ const Home = () => (
       <DribbbleGrid />
     </Section>
 
-    {/* <Section border={true}>
+    <Section border={true}>
       <h2>sites i&apos;ve built</h2>
       <Sites />
-    </Section> */}
+    </Section>
   </S.Home>
 )
 

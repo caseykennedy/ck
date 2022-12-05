@@ -36,6 +36,7 @@ const Header = () => {
           <button type="button" onClick={toggleMenu} className="info-toggle">
             {isNavOpen ? 'hide' : 'info'}
           </button>
+
           <button
             type="button"
             onClick={toggle}
