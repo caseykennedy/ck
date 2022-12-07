@@ -74,12 +74,12 @@ const GlobalStyles = createGlobalStyle`
     width: auto;
     height: auto;
     position: fixed;
-    z-index: 10;
+    z-index: 999999;
     background-position: 50%;
     pointer-events: none;
-    animation: grain 1s steps(6) infinite;
+    animation: grain 2s steps(6) infinite;
     background-image: url(//res.cloudinary.com/crunchdao/image/upload/v1658148613/250-100-12_syxynz.png);
-    opacity: 0.5;
+    opacity: 0.35;
   }
 
   @keyframes grain {

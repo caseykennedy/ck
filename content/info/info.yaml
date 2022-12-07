@@ -4,7 +4,6 @@
       image3: './speed.jpg'
       image4: './me.jpg'
     bio:
-      - 'I combine a design-first process with cutting-edge tech to create seamless digital experiences.'
       - 'Based in the high desert on the west coast, I have made my way through a range of industries including DNS, domain registration, marketing, gaming and hospitality, and entertainment. Combined with over 15 years of experience, my background has taught me to work in fast-paced environments and to collaborate with interdisciplinary teams.'
       - 'My promise is simple—no matter who I work with and what I do, I always aim high, do it right and make it real. I deliver quality design and development, pay attention to detail and have gratitude for the people I work with.'
       # - "Not your standard developer, I have a background in design and
@@ -13,10 +12,10 @@
       # entertainment—my current focus includes web3, frontend and visual
       # design."
     approach:
-      headline: 'Harmonic design<br />approach'
-      message: 'I believe that design is much more than what you see, it is informed harmonic balance. My practice is based on a design-first approach—where design is emphasized and research and discovery are just as important as functionality and aesthetic.'
+      headline: 'Approach'
+      message: 'My practice is based on a design-first mentality—where process and strategy are emphasized and balancing function and aesthetic is the goal.'
     process:
-      headline: 'Out of the box,<br />never out of touch'
+      headline: 'Collaboration'
       message: "Creative collaboration is the foundation of my pursuit.
         It's also at the core of my relationship with my
         clients. I collaborate with a range of folks that recognize
