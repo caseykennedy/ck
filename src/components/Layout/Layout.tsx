@@ -24,7 +24,7 @@ export type LayoutProps = {
 
 const Layout = ({ children, location }: LayoutProps) => {
   console.log(
-    `%c namelayer | decentralize the internet | built by tetra/ `,
+    `%c casey kennedy | decentralize the internet`,
     `background: #78FFF2; color: #000000`
   )
   return (

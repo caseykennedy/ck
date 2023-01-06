@@ -57,7 +57,7 @@
         - 'The Life Change Center'
       capabilities:
         development:
-          - 'web development'
+          - 'web / app dev'
           - 'web3 / dapp'
           - 'eCommerce'
           - 'CMS integration'
