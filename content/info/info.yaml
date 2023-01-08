@@ -59,6 +59,7 @@
         development:
           - 'web / app dev'
           - 'web3 / dapp'
+          - 'react / vue / native'
           - 'eCommerce'
           - 'CMS integration'
           - 'API integration'

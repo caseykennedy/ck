@@ -23,7 +23,7 @@ module.exports = {
   githubUrl: 'https://github.com/caseykennedy',
   linkedinUrl: 'https://www.linkedin.com/in/casey-kennedy-0b123727',
 
-  googleTagID: 'G-YTXRNNMT4C',
+  googleTagID: 'GTM-56ZTSJQ',
 
   // Manifest and Progress color
   themeColor: 'hsl(249, 6%, 4%)',
