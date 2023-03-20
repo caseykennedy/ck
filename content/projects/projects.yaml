@@ -21,7 +21,7 @@
     - 'In addition, the client-side state was refactored using redux and the dark theme will be implemented in a future release.'
   services:
     - 'design'
-    - 'full-stack development'
+    - 'fullstack development'
     - 'API integration'
     - 'hardware integration'
   deliverables:
@@ -82,10 +82,10 @@
     - 'Miner49 quickly became one of my favorite teams to work with. Alongside my good friend Chris Mena, I was tasked with refactoring the companies identity, brand and web3 swap app. With Chris handling the branding and identity, I dove into the design system and implementations within their vue app.'
     - 'After a few rounds of research and ideation, we created a clean, modern UI and UX delivering the user a robust dashboard experience and token swap interface.'
     - 'We completely renovated their front-end, ripping out vuetify and replacing it with a custom SCSS system complete with scalable typography, light and dark modes and global utility classes. In addition we rebuilt every component and refactored the state managment using VueX.'
-    - 'The project has since pivoted and is now known as Vessel—an inflation-resistant token pegged to truflation. Coming soon in 2023.'
+    - 'The project has since pivoted and is now known as Veleo—an inflation-resistant token pegged to truflation. Coming soon in 2023.'
   services:
     - 'design'
-    - 'web development'
+    - 'dApp development'
   deliverables:
     - 'logo identity system'
     - 'figma design system'

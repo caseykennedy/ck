@@ -88,7 +88,7 @@ const Footer = ({ location }: FooterProps) => {
       </nav>
 
       <div className="footer__marquee">
-        <Marquee direction="left" speed={60}>
+        <Marquee direction="left" speed={62}>
           <div>
             If you are interested in working together, please{' '}
             <a

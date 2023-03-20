@@ -42,7 +42,6 @@ async function createProjectPostPages(graphql, actions) {
             cover {
               childImageSharp {
                 gatsbyImageData(
-                  aspectRatio: 1.5
                   layout: FULL_WIDTH
                   formats: [AUTO, AVIF, WEBP]
                   placeholder: DOMINANT_COLOR
@@ -58,7 +57,6 @@ async function createProjectPostPages(graphql, actions) {
             cover {
               childImageSharp {
                 gatsbyImageData(
-                  aspectRatio: 1.5
                   layout: FULL_WIDTH
                   formats: [AUTO, AVIF, WEBP]
                   placeholder: DOMINANT_COLOR
