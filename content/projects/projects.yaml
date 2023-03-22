@@ -92,3 +92,32 @@
     - 'website: vue'
   credits:
     - 'Chris Mena: branding, design'
+
+- client: 'Ortho Implant Co.'
+  tagline: 'A better kind of orthopaedic implant company.'
+  industry: 'medical'
+  website: 'orthoimplantco.com'
+  repository: ''
+  slug: 'oic'
+  year: '2020'
+  images: 'oic'
+  cover: './oic/oic-00.png'
+  category: 'case study'
+  color: 'yellow'
+  desc:
+    - "The way orthopaedic implants are priced and supplied is flawed to the detriment of everyone. OIC's purpose is to rethink and change that system."
+  tasks:
+    - 'Design a website that breaks the rules of the medical implant industry.'
+    - 'Develop a new web app from the front to back and integrate a headless CMS.'
+  process:
+    - 'Working with the OIC team was a dream job from the start. Itai, the CEO, with his eye for aesthetic, offered exellent feedback which helped the ideation and design process flow smoothly. Once the initial look and feel was established, the OIC team allowed me to take the reigns and roll unobstructed.'
+    - 'With a robust, technical layout, the site not only performs well, but adapts to screen size flawlessly. The styling system we chose was a perfect fit for quick development and adaptable, in-browser flexibility.'
+    - "We decided to integrate Sanity as our headless CMS because of it's simple interface and high-end performance and custom workflow. Not only did it fit the team's needs, but it integrated perfectly with GatsbyJS, our frontend framework and build tool."
+  services:
+    - 'visual design'
+    - 'photography'
+    - 'web development'
+    - 'CMS integration'
+  deliverables:
+    - 'figma design system'
+    - 'website: React, GatsbyJS, sanity CMS'
