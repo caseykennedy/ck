@@ -74,7 +74,7 @@ export const Projects = styled.div`
         }
 
         &__icon {
-          SVG {
+          svg {
             transform: rotate(-90deg);
           }
         }
