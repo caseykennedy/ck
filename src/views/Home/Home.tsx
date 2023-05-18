@@ -51,8 +51,8 @@ const Home = () => (
           </a>
         </div>
         <div>
-          If your project is aimed at crypto or decentralization, is
-          open-sourced, sustainable or educational,{' '}
+          If your project aims to better the world, is open-sourced, sustainable
+          or educational,{' '}
           <a
             href={mailTo}
             target="_blank"

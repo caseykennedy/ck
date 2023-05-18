@@ -129,6 +129,12 @@ const Overlay = ({ handleExitOnClick, isOpen }: OverlayProps) => {
               <List list={info.stats.capabilities.design} />
             </div>
           </motion.div>
+          <motion.div variants={polyVariant} className="list">
+            <h4>Toolset</h4>
+            <div>
+              <List list={info.stats.capabilities.toolset} />
+            </div>
+          </motion.div>
         </div>
 
         <div>

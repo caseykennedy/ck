@@ -10,23 +10,22 @@
   category: 'case study'
   color: 'blue'
   desc:
-    - 'Bob Wallet Extension runs a wallet in your web browser and enables DNS resolving through the Handshake DNS. It also allows you to manage your Handshake TLDs and transfer HNS tokens.'
+    - 'Bob Wallet Chrome Extension runs a handshake wallet in your web browser and enables DNS resolving through Handshake DNS. It also allows you to manage your Handshake TLDs and transfer HNS tokens.'
   tasks:
     - 'Refactor the UI and theme.'
-    - 'Integrate multiple account creation and account admin.'
-    - 'Integrate support for Ledger hardware wallet.'
+    - 'Integrate multiple account creation and account admin functions.'
+    - 'Integrate Ledger hardware wallet support.'
   process:
     - 'This project required a deep dive into react, redux and chrome extensions—as well as several new APIs which communicate with the handshake blockchain and USB devices.'
-    - 'Tasks included writing async/await functions, data mutations and serialization, cross window message passing, building views and layouts, and extending background services written in JS and NODE.'
-    - 'In addition, the client-side state was refactored using redux and the dark theme will be implemented in a future release.'
+    - 'Tasks included ui+ux design, writing async functions, data mutations and serialization, cross window message passing, building views and layouts, and writing methods for the NODE backend.'
   services:
     - 'design'
     - 'fullstack development'
     - 'API integration'
     - 'hardware integration'
   deliverables:
-    - 'figma design system'
-    - 'development / integrations'
+    - 'figma prototypes'
+    - 'chrome extension dev: react, redux, hsd'
 
 - client: 'dWeb Foundation'
   tagline: 'Decentralize the internet.'
@@ -48,15 +47,15 @@
     - 'Integrate a headless CMS.'
   process:
     - 'The dWeb project was fairly straightforward—design a technological identity that speaks to blockchain and design and develop a lean website and blog to introduce the foundation.'
-    - "The website was built with react, gatsby and sanity CMS. Being that the site is more informational and static, the SSG capabilites of gatsby were a perfect fit. Sanity allows the foundation's team to easily update the site, post blogs and deploy updates in seconds."
+    - "The website was built with react, gatsby and sanity CMS. Being that the site is more informational and static, the SSG capabilites of gatsby were a perfect fit. sanity allows the foundation's team to easily update the site, post blogs and deploy updates in seconds."
   services:
     - 'design'
     - 'web development'
     - 'CMS integration'
   deliverables:
     - 'logo identity system'
-    - 'design system'
-    - 'website: react, CMS'
+    - 'prototypes'
+    - 'website: react, sanity CMS'
   credits:
     - 'Chris Mena: branding, design'
 
@@ -85,11 +84,11 @@
     - 'The project has since pivoted and is now known as Veleo—an inflation-resistant token pegged to truflation. Coming soon in 2023.'
   services:
     - 'design'
-    - 'dApp development'
+    - 'development'
   deliverables:
     - 'logo identity system'
     - 'figma design system'
-    - 'website: vue'
+    - 'app: vue, web3'
   credits:
     - 'Chris Mena: branding, design'
 
@@ -112,7 +111,7 @@
   process:
     - 'Working with the OIC team was a dream job from the start. Itai, the CEO, with his eye for aesthetic, offered exellent feedback which helped the ideation and design process flow smoothly. Once the initial look and feel was established, the OIC team allowed me to take the reigns and roll unobstructed.'
     - 'With a robust, technical layout, the site not only performs well, but adapts to screen size flawlessly. The styling system we chose was a perfect fit for quick development and adaptable, in-browser flexibility.'
-    - "We decided to integrate Sanity as our headless CMS because of it's simple interface and high-end performance and custom workflow. Not only did it fit the team's needs, but it integrated perfectly with GatsbyJS, our frontend framework and build tool."
+    - "We decided to integrate sanity as our headless CMS because of it's simple interface and high-end performance and custom workflow. Not only did it fit the team's needs, but it integrated perfectly with GatsbyJS, our frontend framework and build tool."
   services:
     - 'visual design'
     - 'photography'
@@ -120,4 +119,4 @@
     - 'CMS integration'
   deliverables:
     - 'figma design system'
-    - 'website: React, GatsbyJS, sanity CMS'
+    - 'website: react, gatsby, sanity CMS'

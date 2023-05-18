@@ -43,6 +43,7 @@ type InfoHookShape = {
         capabilities: {
           design: string[]
           development: string[]
+          toolset: string[]
         }
         clients: string[]
         employment: {
@@ -97,6 +98,7 @@ const useInfo = () => {
             capabilities {
               design
               development
+              toolset
             }
             clients
             employment {

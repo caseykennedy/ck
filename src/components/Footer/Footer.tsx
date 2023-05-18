@@ -90,7 +90,7 @@ const Footer = ({ location }: FooterProps) => {
       <div className="footer__marquee">
         <Marquee direction="left" speed={62}>
           <div>
-            If you are interested in working together, please{' '}
+            Interested in working together? Please{' '}
             <a
               href={site.mailTo}
               target="_blank"
@@ -101,7 +101,7 @@ const Footer = ({ location }: FooterProps) => {
             </a>
           </div>
           <div>
-            I am considering new work for 2023,{' '}
+            Taking on new work for 2023,{' '}
             <a
               href={site.mailTo}
               target="_blank"
@@ -112,7 +112,7 @@ const Footer = ({ location }: FooterProps) => {
             </a>
           </div>
           <div>
-            If your project is aimed at crypto or decentralization, is
+            If your project aims to better the world, is
             open-sourced, sustainable or educational,{' '}
             <a
               href={site.mailTo}

@@ -58,13 +58,11 @@
         - 'The Life Change Center'
       capabilities:
         development:
+          - 'fullstack dev'
           - 'web / app dev'
           - 'web3 / dapp'
-          - 'react / vue / native'
+          - 'API / CMS integration'
           - 'eCommerce'
-          - 'CMS integration'
-          - 'API integration'
-          - 'SEO'
         design:
           - 'product / visual design'
           - 'design systems'
@@ -72,4 +70,10 @@
           - 'ui / ux'
           - 'wireframing'
           - 'prototyping'
-          - 'user journey mapping'
+        toolset:
+          - 'react / vue / remix'
+          - 'nextJS / gatsby / nuxt'
+          - 'prisma / supabase'
+          - 'tRPC / graphQL'
+          - 'sass / tailwind'
+          - 'figma / adobe / dropbox'
