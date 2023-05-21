@@ -14,11 +14,12 @@ const Colors = css`
 
     // background
     --color-bg-light: hsl(249, 11%, 19%);
-    --color-bg: hsl(249, 6%, 4%);
-    --color-bg-blur: hsla(249, 6%, 4%, 0.875);
+    --color-bg: hsl(249, 6%, 14%);
+    --color-bg-blur: hsla(249, 6%, 14%, 0.875);
+    --color-bg-dark-blur: hsla(249, 6%, 10%, 0.875);
     // typography
     --color-text: hsl(245, 8%, 92%);
-    --color-text-muted: hsl(245, 8%, 58%);
+    --color-text-muted: hsl(245, 4%, 58%);
     --color-text-bright: hsl(245, 8%, 92%);
     // border
     --color-border: hsl(245, 8%, 18%);
@@ -30,8 +31,9 @@ const Colors = css`
 
   [data-theme='lightMode'] {
     // background
-    --color-bg: hsl(245, 8%, 92%);
-    --color-bg-blur: hsla(245, 8%, 92%, 0.875);
+    --color-bg: hsl(245, 4%, 92%);
+    --color-bg-blur: hsla(245, 4%, 92%, 0.875);
+    --color-bg-dark-blur: hsla(245, 4%, 92%, 0.875);
     // typography
     --color-text: hsl(270, 5%, 20%);
     --color-text-muted: hsl(245, 8%, 40%);

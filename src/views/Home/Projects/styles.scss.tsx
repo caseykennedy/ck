@@ -41,7 +41,7 @@ export const Projects = styled.div`
       justify-content: space-between;
 
       backdrop-filter: blur(7px);
-      background-color: var(--color-bg-blur);
+      background-color: var(--color-bg-dark-blur);
       border: var(--border);
       padding: var(--gutter);
       /* padding-bottom: var(--space-xxxl); */

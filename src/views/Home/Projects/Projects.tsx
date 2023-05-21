@@ -21,12 +21,12 @@ import distortion from '../../../images/4.png'
 
 const imageVariants = {
   large: {
-    scale: 1.0575,
+    scale: 1.15,
     transition: {
       scale: {
         stiffness: 400,
         velocity: -400,
-        duration: 0.65,
+        duration: 0.35,
         ease: 'easeOut',
       },
     },
@@ -37,7 +37,7 @@ const imageVariants = {
       transform: {
         stiffness: 400,
         velocity: -400,
-        duration: 0.55,
+        duration: 0.15,
         ease: 'easeOut',
       },
     },
