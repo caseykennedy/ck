@@ -62,7 +62,7 @@ const Hero = () => {
               <br />
               cutting-edge digital experiences. */}
               {/* Design and development for people, teams and visionaries— */}
-              Fullstack design &amp; development for people, teams and
+              Development &amp; design for people, teams and
               visionaries.
             </h1>
           </div>

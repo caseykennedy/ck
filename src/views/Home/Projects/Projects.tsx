@@ -162,9 +162,9 @@ const Projects = () => {
               </div>
 
               <div className="excerpt">
-                {item.desc.slice(0, 1).map((para, idx) => (
+                {item.desc.slice(0, 1).map((excerpt, idx) => (
                   <div key={idx} className="excerpt__desc">
-                    {para}
+                    {excerpt}
                   </div>
                 ))}
                 <motion.div variants={arrowVariants} className="excerpt__icon">
