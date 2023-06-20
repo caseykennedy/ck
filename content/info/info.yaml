@@ -4,9 +4,9 @@
       image3: './speed.jpg'
       image4: './me.jpg'
     bio:
-      - 'Based in the high desert on the west coast, I have made my way through a range of industries including DNS, domain registration, crypto, eCommerce, marketing, gaming and hospitality, and entertainment. Combined with over 15 years of experience, my background has taught me to work in fast-paced environments and to collaborate with interdisciplinary teams.'
-      - 'My promise is simple—no matter who I work with and what I do, I always aim high, do it right and make it real. I deliver quality design and development, pay attention to detail and have gratitude for the people I work with.'
-      - 'Outside of work I enjoy mountain sports, training martial arts and traveling to new places.'
+      - 'Based in northern Nevada, I have made my way through a range of industries including DNS, domain registration, crypto, eCommerce, marketing, gaming and hospitality, and entertainment. Combined with over 15 years of experience, my background has taught me to work in fast-paced environments and to collaborate with interdisciplinary teams.'
+      - 'My promise is simple—no matter who I work with and what I do, I always aim high, do it right and make it real. I deliver quality design and modern code, pay attention to detail, and have gratitude for the people I work with.'
+      - 'Outside of work I enjoy mountain sports, training martial arts, and traveling to new places.'
       # - "Not your standard developer, I have a background in design and
       # have made my way through a broad range of industries including
       # DNS, domain registration, marketing, gaming and hospitality, and
@@ -58,8 +58,8 @@
         - 'The Life Change Center'
       capabilities:
         development:
-          - 'fullstack dev'
-          - 'web / app dev'
+          - 'development'
+          - 'web / app'
           - 'web3 / dapp'
           - 'API / CMS integration'
           - 'eCommerce'
