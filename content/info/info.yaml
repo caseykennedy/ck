@@ -49,16 +49,17 @@
         - 'VESL Token'
         - 'Fidira'
         - 'Commence Studio'
-        - 'noip.com'
         - "Fresh Bakin'"
         - 'eOn mist'
         - 'Eight Sleep Mattresses'
         - 'Orthopaedic Implant Co.'
         - 'Bottle Barn'
         - 'The Life Change Center'
+        - 'Zeda Inc.'
       capabilities:
         development:
-          - 'development'
+          - 'frontend'
+          - 'fullstack'
           - 'web / app'
           - 'web3 / dapp'
           - 'API / CMS integration'
@@ -66,14 +67,14 @@
         design:
           - 'product / visual design'
           - 'design systems'
-          - 'info architecture'
+          - 'strategy'
           - 'ui / ux'
           - 'wireframing'
           - 'prototyping'
         toolset:
           - 'react / vue / remix'
           - 'nextJS / gatsby / nuxt'
-          - 'prisma / supabase'
+          - 'drizzle / prisma'
           - 'tRPC / graphQL'
           - 'sass / tailwind'
-          - 'figma / adobe / dropbox'
+          - 'figma / adobe'
