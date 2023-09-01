@@ -21,7 +21,7 @@ import distortion from '../../../images/4.png'
 
 const imageVariants = {
   large: {
-    scale: 1.15,
+    scale: 1.025,
     transition: {
       scale: {
         stiffness: 400,
