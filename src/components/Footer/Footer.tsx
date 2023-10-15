@@ -36,7 +36,7 @@ const Footer = ({ location }: FooterProps) => {
     <S.Footer>
       <div className="footer__contact">
         <div className="footer__contact__cta">
-          <h2 className="text-h1">Let&apos;s talk about your project.</h2>
+          <h2 className="text-h1">Let&apos;s work together</h2>
           {/* <a href={mailTo} className="btn btn--primary">
             Email me
             <Icon name="arrow" className="icon" />
@@ -112,8 +112,8 @@ const Footer = ({ location }: FooterProps) => {
             </a>
           </div>
           <div>
-            If your project aims to better the world, is
-            open-sourced, sustainable or educational,{' '}
+            If your project aims to better the world, is open-sourced,
+            sustainable or educational,{' '}
             <a
               href={site.mailTo}
               target="_blank"

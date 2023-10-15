@@ -57,7 +57,7 @@ export const Header = styled.header`
         color: var(--color-text-muted);
       }
 
-      &.info-toggle {
+      &__info-toggle {
         cursor: help;
 
         &:hover {
@@ -66,7 +66,7 @@ export const Header = styled.header`
         }
       }
 
-      &.theme-toggle {
+      &__theme-toggle {
         font-size: 1.5rem;
         transform: rotate(180deg);
         transition: 0.333s ease-in-out 0s;

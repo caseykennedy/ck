@@ -10,7 +10,7 @@ export const DribbbleGrid = styled.div`
   width: 100%;
 
   @media ${breakpoint.tablet} {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 `
 

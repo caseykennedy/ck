@@ -38,15 +38,19 @@ const Header = () => {
         </div>
 
         <div className="utils">
-          <button type="button" onClick={toggleMenu} className="info-toggle">
-            {isNavOpen ? 'hide' : 'info'}
+          <button
+            type="button"
+            onClick={toggleMenu}
+            className="utils__info-toggle"
+          >
+            {isNavOpen ? 'hide' : 'tl;dr'}
           </button>
 
           <button
             type="button"
             onClick={toggle}
-            className={`theme-toggle ${
-              isDarkMode ? 'theme-toggle__active' : ''
+            className={`utils__theme-toggle ${
+              isDarkMode ? 'utils__theme-toggle__active' : ''
             }`}
           >
             ◒

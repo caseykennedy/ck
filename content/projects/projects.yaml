@@ -2,7 +2,7 @@
   tagline: 'A Handshake wallet in your browser.'
   industry: 'crypto'
   website: 'bobwallet.io'
-  repository: 'https://github.com/kyokan/bob-extension'
+  repository: 'https://chrome.google.com/webstore/detail/bob-extension/ogcmjchbmdichlfelhmceldndgmgpcem'
   slug: 'bob-extension'
   year: '2021'
   images: 'bob-extension'
